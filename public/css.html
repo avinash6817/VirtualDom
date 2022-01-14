@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#daedfb">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="shortcut icon" href="favicon/favicon-virtual-dom.svg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/css.css">
+    <title>Virtual Dom </title>
+</head>
+
+<body class="preload">
+
+    <!-- Preloader -->
+    <div id="preloader" class="preloader">
+        <div class="empty"></div>
+    </div>
+
+    <!-- Home Section -->
+    <section class="home__section">
+        <!-- Navigation Section-->
+        <header>
+            <nav class="navbar__container" id="navbar__container">
+                <div class="navbar__left">
+                    <div class="navbar__logo">
+                        <a href="/"><img id="nav__logo" src="common_component_image/virtual-dom-logo.svg"
+                                alt="LOGO"></a>
+                    </div>
+                    <div class="navbar__links" id="navbar__links">
+                        <ul class="navbar__links__inner" id="navbar__links__inner">
+                            <li><a id="home__link" href="/">Home</a></li>
+
+                            <li class="topics" id="topics"><span id="topics__link">Topics</span>
+                                <ul class="navbar__links__inner__dropdown" id="navbar__links__inner__dropdown">
+                                    <li><a href="javscript.html">Javascript</a></li>
+                                    <li id="react"><a href="react.html">React</a></li>
+                                    <li id="css"><a class="active" href="css.html">Css</a></li>
+                                    <li id="blogs"><a href="blogs.html">Blogs</a></li>
+                                    <li id="python"><a href="python.html">Python</a></li>
+                                    <li id="cpp"><a href="cpp.html">C++</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a id="about-us__link" href="about_us.html">About us</a></li>
+
+                            <li><a id="contact__link" href="contact_us.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="navbar__right">
+
+                    <!-- Dark mode Theme -->
+                    <div class="theme__container">
+                        <input type="checkbox" id="theme__changer">
+                        <label for="theme__changer" class="theme__changer__label">
+                            <div class="theme__changer__track"></div>
+                        </label>
+                    </div>
+
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+                <div class="hamburger__menu" id="hamburger__menu">
+                    <div class="hamburger__menu__button" id="hamburger__menu__button"></div>
+                </div>
+            </nav>
+            <!-- overlay -->
+            <div class="nav__menu__overlay" id="nav__menu__overlay"></div>
+        </header>
+        <!-- Hero section -->
+        <div class="home__section__bg">
+            <svg class="home__section__bg__waves" viewBox="0 0 500 150" preserveAspectRatio="none">
+                <path id="svg__waves"
+                    d="M-74.72,-43.91 C139.73,247.20 333.29,-49.83 500.00,49.99 L515.01,156.41 L-7.56,157.40 Z"
+                    style="stroke: none; fill: #fff;"></path>
+            </svg>
+            <div class="home__section__image" id="home__section__image">
+                <img src="common_component_image/developer-boy-css.svg" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- Topics Section -->
+
+    <main class="topic__section">
+        <h1 class="topic__section__title">
+            Css
+        </h1>
+
+        <section class="css__section">
+
+            <div class="css__section__common">
+                <a href="css_series/css-grid.html" class="css__section__card__link">
+                    <div class="css__section__card__image">
+                        <img src="css_code_image/css-grid.svg" alt="css-grid-image">
+                    </div>
+                </a>
+            </div>
+            
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer section -->
+    <footer class="footer__container">
+
+        <div class="footer__container__upper">
+            <div class="footer__logo">
+                <a href="/"><img id="footer__logo" src="common_component_image/virtual-dom-logo.svg" alt="LOGO"></a>
+            </div>
+            <div class="footer__main__links">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="about_us.html">About Us</a></li>
+                    <li><a href="contact_us.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer__main__topics__links">
+                <ul>
+                    <li class="footer__main__topics__links__title">Topics</li>
+                    <li><a href="javscript.html">Javascript</a></li>
+                    <li><a href="react.html">React</a></li>
+                    <li><a href="css.html">Css</a></li>
+                    <li><a href="blogs.html">Blogs</a></li>
+                    <li><a href="python.html">Python</a></li>
+                    <li><a href="cpp.html">C++</a></li>
+                </ul>
+            </div>
+            <div class="footer__social__links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+
+        <div class="footer__container__lower">
+            <div class="footer__copyright">
+                © 2021-2022 Virtual Dom All rights reserved. Built with <i class="fas fa-heart"></i>
+            </div>
+            <div class="footer__credit">
+                Developed by Avinash
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- Icon to reach top -->
+    <a href="#" class="to__top"><i class="fas fa-chevron-up"></i></a>
+
+
+    <script src="main.js"></script>
+    <script src="dark-light-mode-main.js"></script>
+
+</body>
+
+</html>

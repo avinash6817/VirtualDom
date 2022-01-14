@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#daedfb">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="shortcut icon" href="../favicon/favicon-virtual-dom.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/javascript.css">
+    <title> All you need to know about Array in Javascript </title>
+</head>
+
+<body class="preload">
+
+    <div id="preloader" class="preloader">
+        <div class="empty"></div>
+    </div>
+
+
+    <!-- Navigation Section-->
+    <header>
+        <nav class="navbar__container" id="navbar__container">
+            <div class="navbar__left">
+                <div class="navbar__logo">
+                    <a href="/"><img id="nav__logo"
+                            src="../common_component_image/virtual-dom-logo.svg" alt="LOGO"></a>
+                </div>
+                <div class="navbar__links" id="navbar__links">
+                    <ul class="navbar__links__inner" id="navbar__links__inner">
+                        <li><a id="home__link" href="/">Home</a></li>
+
+                        <li class="topics" id="topics"><span id="topics__link">Topics</span>
+                            <ul class="navbar__links__inner__dropdown" id="navbar__links__inner__dropdown">
+                                <li><a class="active" href="../javscript.html">Javascript</a></li>
+                                <li id="react"><a href="../react.html">React</a></li>
+                                <li id="css"><a href="../css.html">Css</a></li>
+                                <li id="blogs"><a href="../blogs.html">Blogs</a></li>
+                                <li id="python"><a href="../python.html">Python</a></li>
+                                <li id="cpp"><a href="../cpp.html">C++</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a id="about-us__link" href="../about_us.html">About us</a></li>
+
+                        <li><a id="contact__link" href="../contact_us.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navbar__right">
+
+                <!-- Dark mode Theme -->
+                <div class="theme__container__js">
+                    <input type="checkbox" id="theme__changer__js">
+                    <label for="theme__changer__js" class="theme__changer__label__js">
+                        <div class="theme__changer__track__js"></div>
+                    </label>
+                </div>
+
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+            <div class="hamburger__menu" id="hamburger__menu">
+                <div class="hamburger__menu__button" id="hamburger__menu__button"></div>
+            </div>
+        </nav>
+        <!-- overlay -->
+        <div class="nav__menu__overlay" id="nav__menu__overlay"></div>
+    </header>
+
+
+    <!-- Javascript Series Section -->
+    <main class="javascript__series__section">
+        <h2 class="javascript__series__title">
+            All you need to know about Array in Javascript
+        </h2>
+        <article class="javascript__series__main">
+            <p> <span class="bold">#</span> Array is a data structure.</p>
+
+            <p> <span class="bold">#</span> It is ordered collection of multiple items, called Elements.</p>
+
+            <p> <span class="bold">#</span> Array in <i class="fab fa-js-square"></i> can contain elements with values of different data types.
+            </p>
+
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id18').innerText)"></span>
+    </div>
+<pre class="javascript__code">
+<code class="language-javascript" id="id18">
+const myArray = [6, "avinash", [50, 60, "hello"], true];
+// we can do even nested array , as you can see we have string, number, boolean..
+</code>
+</pre>
+</div>
+
+<p><span class="bold">#</span> Indexing always start from zero. this means that the first item in an Array is refered with
+    zero index. second item has one index, last item has arraylength - 1.</p>
+
+<p><span class="bold">#</span> In js Array is object in typeof method.</p>
+
+<h6 class="subtitle"> We can create an Array by many ways in Javascript</h6>
+
+<p>&#x25CF; Using <span  class="text_uline"> square brackets []</span> <br>
+    &#x25CF; Using <span class="text_uline">Array constructor</span> <br>
+    &#x25CF; Using <span class="text_uline">Array.of()</span> <br>
+    &#x25CF; Using <span class="text_uline">Array.from()</span> <br>
+    &#x25CF; Using <span class="text_uline">spread operator (...)</span></p>
+
+
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id19').innerText)"></span>
+    </div>    
+<pre class="javascript__code">
+<code class="language-javascript" id="id19">
+// Using square []
+const items = ['phone', 'laptop', 'mouse', 'keyboard', 'charger', 'router', 'elcado'];
+
+// Using Array constructor
+const item1 = new Array('phone', 'laptop', 'mouse', 'keyboard', 'charger', 'router', 'elcado');
+
+// Using Array.of().
+const item2 = Array.of(10);
+// Array of length 1 with ſo element in it -- [10]
+
+// This will create an Array of length 10 empty items
+const item3 = new Array(10);
+// [ <10 empty items> ]
+
+// This will create an Array of [2,4]
+const item4 = new Array(2, 4);
+</code>
+</pre>
+</div>
+
+<h6 class="subtitle"> Accessing Elements by its index</h6>
+
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id20').innerText)"></span>
+    </div>
+<pre class="javascript__code">
+<code class="language-javascript" id="id20">
+const items = ['phone', 'laptop', 'mouse', 'keyboard', 'charger', 'router', 'elcado'];
+
+console.log(items[0]); // phone
+console.log(items[3]); // keyboard
+console.log(items[5]); // router
+console.log(items[10]); // undefined;
+
+// we can access backward indexes by length properties
+console.log(items.length); // 7
+console.log(items[items.length - 1]); // elcado
+</code>
+</pre>
+</div>
+
+<h6 class="subtitle"> We can also loop over an Array using For or any loop</h6>
+
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id21').innerText)"></span>
+    </div>
+<pre class="javascript__code">
+<code class="language-javascript" id="id21">
+const myArray = [1, 2, 3, 4, 5];
+
+for (let i = 0; i < myArray.length; i++) {
+    console.log(myArray[i]);
+}
+// 1 2 3 4 5
+</code>
+</pre>
+</div>
+
+<h6 class="subtitle"> Array Method</h6>
+
+<p><span class="bg_highlighter">.push()</span></p>
+
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id22').innerText)"></span>
+    </div>
+<pre class="javascript__code">
+<code class="language-javascript" id="id22">
+// Add elements at the end
+
+const items = ['phone', 'laptop', 'mouse', 'keyboard', 'charger', 'router', 'elcado'];
+
+items.push('last item');
+// ['phone', 'laptop', 'mouse', 'keyboard', 'charger', 'router', 'elcado', 'last item']
+</code>
+</pre>
+</div>
+
+<p><span class="bg_highlighter">.unshift()</span></p>
+
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id23').innerText)"></span>
+    </div>
+<pre class="javascript__code">
+<code class="language-javascript" id="id23">
+// Add elements at the start 
+
+const items = ['phone', 'laptop', 'mouse', 'keyboard', 'charger', 'router', 'elcado'];
+
+items.unshift('first item');
+// ['first item', 'phone', 'laptop', 'mouse', "keyboard', 'charger', 'router', 'elcado']
+</code>
+</pre>
+</div>
+
+<p><span class="bg_highlighter">.pop()</span></p>
+
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id24').innerText)"></span>
+    </div>
+<pre class="javascript__code">
+<code class="language-javascript" id="id24">
+// Remove elements at the end 
+
+const items = ['phone', 'laptop', 'mouse', 'keyboard', 'charger', 'router', 'elcado'];
+
+items.pop();
+// ['phone', 'laptop', 'mouse', 'keyboard', 'charger', 'router']
+</code>
+</pre>
+</div>
+
+<p><span class="bg_highlighter">.shift()</span></p>
+
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id25').innerText)"></span>
+    </div>
+<pre class="javascript__code">
+<code class="language-javascript" id="id25">
+// Remove elements at the start
+
+const items = ['phone', 'laptop', 'mouse', 'keyboard', 'charger', 'router', 'elcado'];
+
+items.shift();
+// ['laptop', 'mouse', 'keyboard', 'charger', 'router', 'elcado']
+</code>
+</pre>
+</div>
+
+<p><span class="bg_highlighter">.slice()</span></p>
+
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id26').innerText)"></span>
+    </div>
+<pre class="javascript__code">
+<code class="language-javascript" id="id26">
+// Create a copy of new Array 
+
+const items = ['phone', 'laptop', 'mouse', 'keyboard', 'charger', 'router', 'elcado'];
+
+const newItems = items.slice();
+// ['phone', 'laptop', 'mouse', 'keyboard', 'charger', 'router', 'elcado']
+
+// NOTE -- both are different Array
+</code>
+</pre>
+</div>
+
+<p><span class="bg_highlighter">Array.isArray()</span> <br> method determines whether the passed value is an
+Array or not, it return boolean. </p>
+<p># <span class="text_uline">Syntax--Array.isArray(value)</span></p>
+
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id27').innerText)"></span>
+    </div>
+<pre class="javascript__code">
+<code class="language-javascript" id="id27">
+const items = ['phone', 'laptop', 'mouse', 'keyboard', 'charger', 'router', 'elcado'];
+const item1 = { age: 20 };
+const item2 = 'Navbar';
+const item3 = undefined;
+const item4 = [];
+
+console.log(Array.isArray(items));      // true
+console.log(Array.isArray({ age: 20})); // false
+console.log(Array.isArray('Navbar'));   // false
+console.log(Array.isArray(undefined));  // false
+console.log(Array.isArray([]));         // true
+</code>
+</pre>
+</div>
+
+<p><span class="bg_highlighter">.concat()</span></p>
+
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id28').innerText)"></span>
+    </div>
+<pre class="javascript__code">
+<code class="language-javascript" id="id28">
+const item1 = ['phone', 'laptop', 'mouse'];
+const item2 = ['keyboard', 'charger', 'router'];
+const item3 = ['headphone', 'bluetooth', 'wifi'];
+
+const items = item1.concat(item2);
+console.log(items);
+// ['phone', 'laptop', 'mouse', 'keyboard', 'charger', 'router']
+
+console.log(item1.concat(item2, item3));
+// ['phone', 'laptop', 'mouse', 'keyboard', 'charger', 'router', 'headphone', 'bluetooth', 'wifi']
+
+// NOTE -- array.concat(arri, arr2,....., arrN)
+</code>
+</pre>
+</div>
+
+<p><span class="bg_highlighter">.join()</span> <br> method joins all elements of the Array using a separator and
+returns a <span class="text_uline">string</span>. default separator is <span
+class="text_uline">comma</span>(,) </p>
+
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id29').innerText)"></span>
+    </div>
+<pre class="javascript__code">
+<code class="language-javascript" id="id29">
+const items = ['phone', 'laptop', 'mouse', 'keyboard', 'charger', 'router', 'elcado'];
+
+console.log(items.join('/'));
+// phone/laptop/mouse/keyboard/charger/router/elcado
+
+console.log(typeof items.join('7'));
+// string
+</code>
+</pre>
+</div>
+
+<p><span class="bg_highlighter">.fill()</span> <br> method is used to change the the elements to a static value
+or a selected index. </p>
+
+<p><span class="bold">#</span> we can also pass argument to <span class="text_uline">fill()</span> method, first argument is the
+value we change with, second argument is the starting index, last argument is to determine where to stop
+filling. </p>
+<p><span class="bold"># </span><span class="text_uline">fill()</span> changes the original Array </p>
+
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id30').innerText)"></span>
+    </div>
+<pre class="javascript__code">
+<code class="language-javascript" id="id30">
+const items = ['phone', 'laptop', 'mouse', 'keyboard'];
+
+console.log(items.fill('elcado'));
+// ['elcado', 'elcado', 'elcado', 'elcado']
+
+console.log(items.fill('elcado', 1, 4));
+// ['phone', 'elcado', 'elcado', 'elcado']
+</code>
+</pre>
+</div>
+
+<p><span class="bg_highlighter">.includes()</span> <br> return boolean whether the value is found or not </p>
+
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id31').innerText)"></span>
+    </div>
+<pre class="javascript__code">
+<code class="language-javascript" id="id31">
+const items = ['phone', 'laptop', 'mouse', 'keyboard'];
+
+console.log(items.includes('laptop')); // true 
+console.log(items.includes('elcado')); // false
+</code>
+</pre>
+</div>
+
+<p><span class="bg_highlighter">.indexof()</span> </p>
+
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id32').innerText)"></span>
+    </div>
+<pre class="javascript__code">
+<code class="language-javascript" id="id32">
+const items = ['phone', 'laptop', 'mouse', 'keyboard'];
+
+console.log(items.indexOf('laptop')); // 1 
+console.log(items.indexOf('elcado')); // -1 -- element not found
+</code>
+</pre>
+</div>
+
+<p><span class="bg_highlighter">.reverse()</span> <br> modifies the original Array</p>
+
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id33').innerText)"></span>
+    </div>
+<pre class="javascript__code">
+<code class="language-javascript" id="id33">
+const items = ['phone', 'laptop', 'mouse', 'keyboard'];
+
+console.log(items.reverse('laptop'));
+// ['keyboard', 'mouse', 'laptop', 'phone']
+</code>
+</pre>
+</div>
+
+<p><span class="bg_highlighter">.sort()</span> <br> method sorts the elements of an array and returns sorted
+Array. The default <span class="text_uline">sort()</span> method converts the element types into
+strings and then sort them, see the below result.</p>
+
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id34').innerText)"></span>
+    </div>
+<pre class="javascript__code">
+<code class="language-javascript" id="id34">
+const numbers = [55, 22, 88, 36, 100, 1, 66];
+numbers.sort();
+
+console.log(numbers); // (7) [1, 100, 22, 36, 55, 66, 88]
+
+// default behavior converted into string, 
+// so sorting is done on the basis of ASCII code
+</code>
+</pre>
+</div>
+
+<p><span class="bold">#</span> The <span class="text_uline">sort()</span> method accepts an optional comparator function as an argument . you can write a comparator function and pass to the <span class="text_uline">sort()</span> method to override the default sorting behavior. In simple language <span class="text_uline">sort()</span> method can take callback function as input.</p>
+
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id34').innerText)"></span>
+    </div>
+<pre class="javascript__code">
+<code class="language-javascript" id="id34">
+const fruits = ['Banana', 'Orange', 'Apple', 'Mango'];
+fruits.sort();
+
+console.log(fruits);
+// ['Apple', 'Banana', 'Mango', 'Orange']
+
+const numbers = [55, 22, 88, 36, 100, 1, 66]
+
+function ascending(a, b) {
+    return a - b;
+}
+
+console.log(numbers.sort(ascending)); 
+
+// [1, 22, 36 55, 66, 88, 100]
+</code>
+</pre>
+</div>
+
+<p><span class="bg_highlighter">.splice()</span> <br> method can add, update and remove elements from an Array.
+splice() overwrites the original array.</p>
+<p><span class="bold">#</span> Syntax -- splice(<span class="text_uline">index</span>, <span class="text_uline">number of
+items to be removed</span>, <span class="text_uline">New elements to be added</span>)</p>
+
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id35').innerText)"></span>
+    </div>
+<pre class="javascript__code">
+<code class="language-javascript" id="id35">
+const fruit1 = ["Banana", "Orange", "Apple", "Mango"];
+
+// At index 2, add 2 elements 
+fruit1.splice(2, 0, "Lemon", "Kiwi"); 
+console.log(fruit1);  // ['Banana', 'Orange', 'Lemon', 'Kiwi', 'Apple', Mango']
+
+
+const fruit2 = ["Banana", "Orange", "Apple", "Mango"];
+
+// At index 2, add 2 elements, remove 1 
+fruit2.splice(2, 1, "Lemon", "Kiwi"); 
+console.log(fruit2);  // ['Banana', 'Orange', 'Lemon', 'Kiwi', 'Mango']
+
+
+const fruit3 = ["Banana", "Orange", "Apple", "Mango", "Kiwi" ];
+
+// At index 2, remove 2 items 
+fruit3.splice(2, 2); 
+console.log(fruit3);  // ['Banana', 'Orange', 'Kiwi']
+</code>
+</pre>
+</div>
+
+<p><span class="bg_highlighter">.Array.from()</span> <br> We can convert HTMLCollection to Array which we
+normally get after accesing DOM. it seems like an Array but it is an Array-Like object. Thats the reason
+we cant able to use FOREach or any other loop for iteration. </p>
+
+<p><span class="bold">#</span> Array.from ( document .getElements ByTagName('li')) ,
+This will convert the HTMLCollection into an Array.</p>
+
+<p><span class="bg_highlighter">.Array.of()</span> <br> method creates a new Array using any numberof elements of
+any type. </p>
+
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id36').innerText)"></span>
+    </div>
+<pre class="javascript__code">
+<code class="language-javascript" id="id36">
+console.log(Array.of(2, false, 'test', {'name': Avinash}));
+
+// (4) [2, false, 'test', {...}] 
+// 0:2 
+// 1: false 
+// 2: "test" 
+// 3: {name: 'Avinash'} 
+// length: 4 
+// [[Prototype]]: Array(0)
+</code>
+</pre>
+</div>
+
+<p><span class="bg_highlighter">.some()</span> <br> also return boolean whether the value is found or not but it
+is based on atleast one Element in the array passing the condition is true/false (provided as a
+function) 
+</p>
+
+<p> <span class="bold">#</span> <span class="text_uline">some()</span> executes the function once for each element in the array_
+</p>
+
+<p><span class="bold">#</span> If it finds an array element where the function returns a true value, <span
+class="text_uline">some()</span> returns true (and does not check the remaining values)
+Otherwise it returns false.</p>
+<p><span class="bold">#</span> <span class="text_uline">some()</span> does not change the original array.</p>
+
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id37').innerText)"></span>
+    </div>
+<pre class="javascript__code">
+<code class="language-javascript" id="id37">
+const age1 = [5, 11, 18, 20];
+
+function drivingLicense(age) {
+    return age >= 18;
+}
+
+console.log(age1.some(drivingLicense));  // true
+
+const age2 = [5, 11, 15, 17];
+
+function drivingLicense(age) {
+    return age >= 18;
+}
+
+console.log(age2.some(drivingLicense));  // false
+</code>
+</pre>
+</div>
+
+<p><span class="bg_highlighter">.find()</span> <br> method returns the <span class="text_uline">first matched element</span> from the array that satisfies the condition in the function.</p>
+
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id38').innerText)"></span>
+    </div>
+<pre class="javascript__code">
+<code class="language-javascript" id="id38">
+const myArray1 = [5, 12, 8, 130, 44];
+
+function numberGreaterThan10(elem) {
+    return elem > 10;
+}
+
+const found = myArray1.find(numberGreaterThan10);
+console.log(found); 
+// 12 -- first matched from Array
+</code>
+</pre>
+</div>
+
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id39').innerText)"></span>
+    </div>
+<pre class="javascript__code">
+<code class="language-javascript" id="id39">
+const myArray2 = [5, 12, 8, 130, 75, 44];
+
+function numberGreaterThan50(elem) {
+    return elem > 50;
+}
+
+const found = myArray2.find(numberGreaterThan50);
+console.log( found); 
+// 130 -- first matched from Array
+</code>
+</pre>
+</div>
+
+<p class="note"><strong># NOTE --</strong> Dont expect 75</p>
+
+<p><span class="bg_highlighter">.every()</span> <br> method check whether  every element of the array satisfies the condition passed in the function or not. It returns Boolean. </p>
+
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id40').innerText)"></span>
+    </div>
+<pre class="javascript__code">
+<code class="language-javascript" id="id40">
+const myArray1 = [20,55,15,75,65];
+
+function numberGreaterThan10(elem) {
+    return elem > 10;
+}
+
+const found = myArray1.every(numberGreaterThan10);
+console.log(found); // true
+    
+</code>
+</pre>
+</div>
+
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id41').innerText)"></span>
+    </div>
+<pre class="javascript__code">
+<code class="language-javascript" id="id41">
+const myArray2 = [5, 12, 8, 130, 75, 44];
+
+function numberGreaterThan50(elem) {
+    return elem > 50;
+}
+
+const found = myArray2.every(numberGreaterThan50);
+console.log(found); // false,
+</code>
+</pre>
+</div>
+            
+<p><span class="bg_highlighter">.at()</span> <br>
+method used to access the elements using both positive and negative indexes using a single method. </p>
+
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id42').innerText)"></span>
+    </div>
+<pre class="javascript__code">
+<code class="language-javascript" id="id42">
+const items = ['phone', 'laptop', 'mouse', 'router','elcado', ]
+
+console.log(items.at(0));  // phone
+console.log(items.at(1));  // laptop
+console.log(items.at(2));  // mouse
+console.log(items.at(3));  // router
+console.log(items.at(4));  // elcado
+
+console.log(items.at(-1));  // elcado
+console.log(items.at(-2));  // router
+</code>
+</pre>
+</div>
+
+<p><span class="bg_highlighter">.toString()</span> <br> 
+method returns a string with all array values separated by commas.
+<span class="text_uline">toString()</span> does not change the original array.
+</p>
+
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id43').innerText)"></span>
+    </div>         
+<pre class="javascript__code">
+<code class="language-javascript" id="id43">
+const item = ['phone', 'laptop', 'mouse', 'router', 'elcado' ];
+
+const itemString = item.toString(); 
+console.log(itemString); 
+// phone, laptop, mouse, router, elcado
+</code>
+</pre>
+</div>
+
+        </article>
+    </main>
+
+    <!-- Button class -->
+    <section class="button__class__main">
+        <button class="button__class prev">
+            <a href="What_is_For_Loop.html">Prev</a>
+        </button>
+        <button class="button__class next">
+            <a href="How_to_Destructure_Array.html">Next</a>
+        </button>
+    </section>
+
+
+    <!-- Footer section -->
+    <footer class="footer__container">
+
+        <div class="footer__container__upper">
+            <div class="footer__logo">
+                <a href="/"><img id="footer__logo"
+                        src="../common_component_image/virtual-dom-logo.svg" alt="LOGO"></a>
+            </div>
+            <div class="footer__main__links">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="../about_us.html">About Us</a></li>
+                    <li><a href="../contact_us.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer__main__topics__links">
+                <ul>
+                    <li class="footer__main__topics__links__title">Topics</li>
+                    <li><a href="../javscript.html">Javascript</a></li>
+                    <li><a href="../react.html">React</a></li>
+                    <li><a href="../css.html">Css</a></li>
+                    <li><a href="../blogs.html">Blogs</a></li>
+                    <li><a href="../python.html">Python</a></li>
+                    <li><a href="../cpp.html">C++</a></li>
+                </ul>
+            </div>
+            <div class="footer__social__links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+
+        <div class="footer__container__lower">
+            <div class="footer__copyright">
+                © 2021-2022 Virtual Dom All rights reserved. Built with <i class="fas fa-heart"></i>
+            </div>
+            <div class="footer__credit">
+                Developed by Avinash
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- Icon to reach top -->
+    <a href="#" class="to__top"><i class="fas fa-chevron-up"></i></a>
+
+    <script src="../main.js"></script>
+    <script src="../js/javascript.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+</body>
+
+</html>

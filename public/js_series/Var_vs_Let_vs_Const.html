@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#daedfb">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="shortcut icon" href="../favicon/favicon-virtual-dom.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/javascript.css">
+    <title>Var vs Let vs Const What to use ?</title>
+</head>
+
+<body class="preload">
+    
+    <div id="preloader" class="preloader">
+        <div class="empty"></div>
+    </div>
+
+
+    <!-- Navigation Section-->
+    <header>
+        <nav class="navbar__container" id="navbar__container">
+            <div class="navbar__left">
+                <div class="navbar__logo">
+                    <a href="/"><img id="nav__logo" src="../common_component_image/virtual-dom-logo.svg"
+                            alt="LOGO"></a>
+                </div>
+                <div class="navbar__links" id="navbar__links">
+                    <ul class="navbar__links__inner" id="navbar__links__inner">
+                        <li><a id="home__link" href="/">Home</a></li>
+
+                        <li class="topics" id="topics"><span id="topics__link">Topics</span>
+                            <ul class="navbar__links__inner__dropdown" id="navbar__links__inner__dropdown">
+                                <li><a class="active" href="../javscript.html">Javascript</a></li>
+                                <li id="react"><a href="../react.html">React</a></li>
+                                <li id="css"><a href="../css.html">Css</a></li>
+                                <li id="blogs"><a href="../blogs.html">Blogs</a></li>
+                                <li id="python"><a href="../python.html">Python</a></li>
+                                <li id="cpp"><a href="../cpp.html">C++</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a id="about-us__link" href="../about_us.html">About us</a></li>
+
+                        <li><a id="contact__link" href="../contact_us.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navbar__right">
+
+                <!-- Dark mode Theme -->
+                <div class="theme__container__js">
+                    <input type="checkbox" id="theme__changer__js">
+                    <label for="theme__changer__js" class="theme__changer__label__js">
+                        <div class="theme__changer__track__js"></div>
+                    </label>
+                </div>
+                
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+            <div class="hamburger__menu" id="hamburger__menu">
+                <div class="hamburger__menu__button" id="hamburger__menu__button"></div>
+            </div>
+        </nav>
+        <!-- overlay -->
+        <div class="nav__menu__overlay" id="nav__menu__overlay"></div>
+    </header>
+
+
+    <!-- Javascript Series Section -->
+    <main class="javascript__series__section">
+        <h2 class="javascript__series__title">
+            Var vs Let vs Const What to use ?
+        </h2>
+        <article class="javascript__series__main">
+
+            <p><span class="bold">#</span> Before ES6 <span class="bg_highlighter">var</span> was the only way to declare variables. </p>
+
+            <p><span class="bold">#</span> ECMAScript 6 introduced <span class="bg_highlighter">let</span> & <span class="bg_highlighter">const</span>.</p> 
+            
+            <h6 class="subtitle">Var</h6>
+            
+            <p>&#x25CF; <span class="bg_highlighter">var</span> scope is global when a var variable is declared outside a function.
+                This means that any variable that is declared with var outside a function block is available for
+                use in the whole window.</p>
+            
+            <p>&#x25CF; <span class="bg_highlighter">var</span> is function scoped when it is declared within a function. This means
+                that it is available only within that function. </p>
+
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id9').innerText)"></span>
+    </div>
+
+<pre class="javascript__code">
+<code class="language-javascript" id="id9">
+var greeting = "say hi";
+
+function newFunction() {
+    var hello = "hello";
+}
+
+console.log(greeting); // say hi
+
+console.log(hello); // Uncaught ReferenceError: hello is not defined
+</code>
+</pre>
+</div>
+            
+            
+            <p>&#x25CF; Here, <span class="bg_highlighter">greeting</span> is globally scoped because it exists outside of function
+                while <span class="bg_highlighter">hello</span> is function scoped. So we cannot access the variable <span>hello</span>
+                outside of a function.</p>
+            
+            <p>&#x25CF; <span class="bg_highlighter">var</span> variables can be re-declared and updated also.</p> 
+            
+            <h6 class="subtitle">Problem with var</h6>
+
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id10').innerText)"></span>
+    </div>
+
+<pre class="javascript__code">
+<code class="language-javascript" id="id10">
+var greeting = "hey hi";
+var times = 4;
+
+if (times > 3) {
+    var greeting = "say Hello instead";
+}
+
+console.log(greeting) // "say Hello instead"
+</code>
+</pre>
+</div>
+            
+           <h6 class="subtitle">Hoisting of Var</h6>
+           
+            <p>&#x25CF; Hoisting is a JavaScript mechanism where variables and function declarations are moved
+                to the top of their scope before span execution.</p>
+           
+            <h6 class="subtitle">Let</h6>
+            
+            <p>&#x25CF; <span class="bg_highlighter">let</span> is block lvl scoped</p>
+            
+            <p>&#x25CF; So a variable declared in a block with <span class="bg_highlighter">let</span> is only available for use
+                within that block.</p>
+
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id11').innerText)"></span>
+    </div>
+<pre class="javascript__code">
+<code class="language-javascript" id="id11">
+let greeting = "say Hi";
+let times = 4;
+
+if (times > 3) {
+    let hello = "say Hello instead";;
+    console.log(hello); // "say Hello instead"
+}
+
+console.log(hello) // hello is not defined
+
+// We see that using hello outside its block (the
+// curly braces where it was defined) returns an error.
+
+// This is because let variables are block scoped        
+</code>
+</pre>
+</div>
+
+            <p>&#x25CF; <span class="bg_highlighter">let</span> can be updated but not re-declared.</p>
+            
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id12').innerText)"></span>
+    </div>
+<pre class="javascript__code">
+<code class="language-javascript" id="id12">
+let greeting = "say Hi";
+greeting = "say Hello instead";
+// This is fine we are updating its value.
+</code>
+</pre>
+</div>
+
+
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id13').innerText)"></span>
+    </div>
+<pre class="javascript__code">
+<code class="language-javascript" id="id13">
+// This will give an error.
+let greeting = "say Hi";
+let greeting = "say Hello instead";
+// error: Identifier 'greeting' has already been declared   
+</code>
+</pre>
+</div>
+
+
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id14').innerText)"></span>
+    </div>
+<pre class="javascript__code">
+<code class="language-javascript" id="id14">
+// However, if the same variable is defined in
+// different scopes, there will be no error:
+
+let greeting = "say Hi";
+if (true) {
+    let greeting = "say Hello instead";
+    console.log(greeting); // "say Hello instead"
+}
+console.log(greeting); // "say Hi"
+</code>
+</pre>
+</div>
+            
+            <h6 class="subtitle">Const</h6>
+            
+           <p> &#x25CF; <span class="bg_highlighter">const</span> declarations are also block level scoped.</p>
+            
+            <p>&#x25CF; Like <span class="bg_highlighter">let</span> declarations, <span class="bg_highlighter">const</span> declarations can only be
+                accessed within the block they were declared.</p>
+            
+            <p>&#x25CF; <span class="bg_highlighter">const</span> cannot be updated or re-declared</p>
+
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id15').innerText)"></span>
+    </div>
+<pre class="javascript__code">
+<code class="language-javascript" id="id15">
+const greeting = "say Hi";
+greeting = "say Hello instead";
+// error: Assignment to constant variable.  
+</code>
+</pre>
+</div>
+
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id16').innerText)"></span>
+    </div>
+<pre class="javascript__code">
+<code class="language-javascript" id="id16">
+const greeting = "say Hi"
+const greeting = "say Hello instead"; 
+// error: Identifier ‘greeting' has already been declared 
+</code>
+</pre>
+</div>
+
+
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id17').innerText)"></span>
+    </div>
+<pre class="javascript__code">
+<code class="language-javascript" id="id17">
+const greeting = {
+    message: "say Hi",
+    times: 4
+}
+
+greeting = {
+    words: "Hello",
+    number: "five"
+} 
+// error: Assignment to constant variable. 
+
+greeting.message = "say Hello instead";
+// But the properties of objects can be updated.  
+</code>
+</pre>
+</div>
+            
+            <h6 class="subtitle">Summary</h6>
+            
+            <p>&#x25CF; <span class="bg_highlighter">var</span> declarations are globally scoped or function scoped while
+                <span class="bg_highlighter">let</span> and <span class="bg_highlighter">const</span> are block scoped.</p>
+           
+            <p>&#x25CF; <span class="bg_highlighter">var</span> variables can be updated and re-declared within its scope;
+                <span class="bg_highlighter">let</span> variables can be updated but not re-declared; <span class="bg_highlighter">const</span> variables can
+                neither be updated nor re-declared.</p>
+            
+            <p>&#x25CF; They are all hoisted to the top of their scope. But while <span class="bg_highlighter">var</span> variables
+                are initialized with undefined, <span class="bg_highlighter">let</span> and <span class="bg_highlighter">const</span> variables are not
+                initialized.</p>
+            
+            <p>&#x25CF; While <span class="bg_highlighter">var</span> and <span class="bg_highlighter">let</span> can be declared without being initialized,
+                <span class="bg_highlighter">const</span> must be initialized during declaration.</p>
+
+            <p class="note"> <strong>Note - </strong> Avoid using <span class="text_uline">var</span> as much as you can,use <span>let</span>
+                when you want to update value and use <span class="text_uline">const</span> when we dont want to update/reassign value.</p>
+
+        </article>
+    </main>
+
+    <!-- Button class -->
+    <section class="button__class__main">
+        <button class="button__class prev">
+            <a href="Scope_in_JS.html">Prev</a>
+        </button>
+        <button class="button__class next">
+            <a href="What_is_Loop.html">Next</a>
+        </button>
+    </section>
+
+    <!-- Footer section -->
+    <footer class="footer__container">
+
+        <div class="footer__container__upper">
+            <div class="footer__logo">
+                <a href="/"><img id="footer__logo" src="../common_component_image/virtual-dom-logo.svg"
+                        alt="LOGO"></a>
+            </div>
+            <div class="footer__main__links">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="../about_us.html">About Us</a></li>
+                    <li><a href="../contact_us.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer__main__topics__links">
+                <ul>
+                    <li class="footer__main__topics__links__title">Topics</li>
+                    <li><a href="../javscript.html">Javascript</a></li>
+                    <li><a href="../react.html">React</a></li>
+                    <li><a href="../css.html">Css</a></li>
+                    <li><a href="../blogs.html">Blogs</a></li>
+                    <li><a href="../python.html">Python</a></li>
+                    <li><a href="../cpp.html">C++</a></li>
+                </ul>
+            </div>
+            <div class="footer__social__links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+
+        <div class="footer__container__lower">
+            <div class="footer__copyright">
+                © 2021-2022 Virtual Dom All rights reserved. Built with <i class="fas fa-heart"></i>
+            </div>
+            <div class="footer__credit">
+                 Developed by Avinash
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- Icon to reach top -->
+    <a href="#" class="to__top"><i class="fas fa-chevron-up"></i></a>
+
+    <script src="../main.js"></script>
+    <script src="../js/javascript.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+</body>
+
+</html>

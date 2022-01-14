@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="learn programming languages and web developemnt development in easy way">
+    <meta name="theme-color" content="#daedfb">
+    <link rel="canonical" href="https://virtualdom.in"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="shortcut icon" href="favicon/favicon-virtual-dom.svg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Virtual Dom </title>
+</head>
+
+<body class="preload">
+
+    <!-- Preloader -->
+    <div id="preloader" class="preloader">
+        <div class="empty"></div>
+    </div>
+
+
+    <!-- Home Section -->
+    <section class="home__section">
+
+        <!-- Navigation Section-->
+        <header>
+            <nav class="navbar__container" id="navbar__container">
+
+                <div class="navbar__left">
+                    <div class="navbar__logo">
+                        <a href="/"><img id="nav__logo" src="common_component_image/virtual-dom-logo.svg" alt="LOGO"></a>
+                    </div>
+
+                    <div class="navbar__links" id="navbar__links">
+                        <ul class="navbar__links__inner" id="navbar__links__inner">
+                            <li><a class="active" id="home__link" href="/">Home</a></li>
+
+                            <li class="topics" id="topics"><span id="topics__link">Topics</span>
+                                <ul class="navbar__links__inner__dropdown" id="navbar__links__inner__dropdown">
+                                    <li id="js"><a href="javscript.html">Javascript</a></li>
+                                    <li id="react"><a href="react.html">React</a></li>
+                                    <li id="css"><a href="css.html">Css</a></li>
+                                    <li id="blogs"><a href="blogs.html">Blogs</a></li>
+                                    <li id="python"><a href="python.html">Python</a></li>
+                                    <li id="cpp"><a href="cpp.html">C++</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a id="about-us__link" href="about_us.html">About us</a></li>
+
+                            <li><a id="contact__link" href="contact_us.html">Contact</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="navbar__right">
+                    <!-- Dark mode Theme -->
+                    <div class="theme__container">
+                        <input type="checkbox" id="theme__changer">
+                        <label for="theme__changer" class="theme__changer__label">
+                            <div class="theme__changer__track"></div>
+                        </label>
+                    </div>
+
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+
+                <div class="hamburger__menu" id="hamburger__menu">
+                    <div class="hamburger__menu__button" id="hamburger__menu__button"></div>
+                </div>
+
+            </nav>
+
+            <!-- overlay -->
+            <div class="nav__menu__overlay" id="nav__menu__overlay"></div>
+        </header>
+
+        <!-- Hero section -->
+        <div class="home__section__bg">
+
+            <svg class="home__section__bg__waves" viewBox="0 0 500 150" preserveAspectRatio="none">
+                <path id="svg__waves"
+                    d="M-74.72,-43.91 C139.73,247.20 333.29,-49.83 500.00,49.99 L515.01,156.41 L-7.56,157.40 Z"
+                    style="stroke: none; fill: #fff;"></path>
+            </svg>
+
+            <div class="home__section__image">
+                <img src="common_component_image/laptop-boy-vd.svg" alt="">
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Topics Section -->
+    <main class="topic__section">
+        <h1 class="topic__section__title">
+            Topics
+        </h1>
+        <section class="topic__section__card">
+
+            <!-- Card 1 -->
+            <div class="animation" data-aos="fade-up">
+
+                <div class="topic__section__card__inner">
+                    <a href="javscript.html">
+                        <div class="card__inner__image">
+                            <img src="homepage_card_image/Javascript.svg" alt="javscript-image">
+                        </div>
+                        <div class="card__inner__title">
+                            Javascript
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Card 2 -->
+            <div class="animation" data-aos="fade-up">
+
+                <div class="topic__section__card__inner">
+                    <a href="css.html">
+                        <div class="card__inner__image">
+                            <img src="homepage_card_image/Css.svg" alt="css-image">
+                        </div>
+                        <div class="card__inner__title">
+                            Css
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Card 3 -->
+            <div class="animation" data-aos="fade-up">
+
+                <div class="topic__section__card__inner">
+                    <a href="react.html">
+                        <div class="card__inner__image">
+                            <img src="homepage_card_image/React.svg" alt="react-image">
+                        </div>
+                        <div class="card__inner__title">
+                            React <span class="coming__soon">Coming Soon</span>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Card 4 -->
+            <div class="animation" data-aos="fade-up">
+
+                <div class="topic__section__card__inner">
+                    <a href="blogs.html">
+                        <div class="card__inner__image">
+                            <img src="homepage_card_image/Blogs.svg" alt="blogs-image">
+                        </div>
+                        <div class="card__inner__title">
+                            Blogs
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Card 5 -->
+            <div class="animation" data-aos="fade-up">
+
+                <div class="topic__section__card__inner">
+                    <a href="python.html">
+                        <div class="card__inner__image">
+                            <img src="homepage_card_image/Python.svg" alt="python-image">
+                        </div>
+                        <div class="card__inner__title">
+                            Python <span class="coming__soon">Coming Soon</span>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Card 6 -->
+            <div class="animation" data-aos="fade-up">
+
+                <div class="topic__section__card__inner">
+                    <a href="cpp.html">
+                        <div class="card__inner__image">
+                            <img src="homepage_card_image/C++.svg" alt="cpp-image">
+                        </div>
+                        <div class="card__inner__title">
+                            C++ <span class="coming__soon">Coming Soon</span>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+
+
+    <!-- FAQ section -->
+    <section class="faq__section">
+
+        <div class="faq__section__title">
+            <h1>FREQUENTLY ASKED QUESTION</h1>
+        </div>
+
+        <div class="faq__common">
+
+            <div class="faq__common component">
+                <div class="accordian__questions" id="accordian__questions">
+                    <p>&#10146; What is Virtual Dom ? </p>
+                </div>
+                <div class="accordian__answer" id="accordian__answer">
+                    <p>
+                        Virtual Dom is Blogging websites Where you will find Frontend technologies Css, Js, React and
+                        Programming languages related Topics like JS, Cpp, Python..and more to add on in future.
+
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq__common component">
+                <div class="accordian__questions" id="accordian__questions">
+                    <p>&#10146; Why to create Virtual Dom ? </p>
+                </div>
+                <div class="accordian__answer" id="accordian__answer">
+                    <p>
+                        I have created this websites just to add on the fastest way learn the Topics and Web
+                        technologies.
+
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq__common component">
+                <div class="accordian__questions" id="accordian__questions">
+                    <p>&#10146; Where do you get inspiration to create Virtual Dom ? </p>
+                </div>
+                <div class="accordian__answer" id="accordian__answer">
+                    <p>
+                        Theres a lot of good documentation related Blogging sites like MDN Reference, DEV.to,
+                        Freecodecamp.org, Tutorialspoint, W3schools and For Queries Stackoverflow, GeeksofGeeks and more
+                        on. I get inspiration from these sites.
+
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq__common component">
+                <div class="accordian__questions" id="accordian__questions">
+                    <p>&#10146; What is Unique in Virtual Dom ? </p>
+                </div>
+                <div class="accordian__answer" id="accordian__answer">
+                    <p>
+                        I have just tried to make the simple and clean UI to navigate through the pages, grab the
+                        resources fast as you can..
+
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Footer section -->
+    <footer class="footer__container">
+
+        <div class="footer__container__upper">
+            <div class="footer__logo">
+                <a href="/"><img id="footer__logo" src="common_component_image/virtual-dom-logo.svg"
+                        alt="LOGO"></a>
+            </div>
+            <div class="footer__main__links">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="about_us.html">About Us</a></li>
+                    <li><a href="contact_us.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer__main__topics__links">
+                <ul>
+                    <li class="footer__main__topics__links__title">Topics</li>
+                    <li><a href="javscript.html">Javascript</a></li>
+                    <li><a href="react.html">React</a></li>
+                    <li><a href="css.html">Css</a></li>
+                    <li><a href="blogs.html">Blogs</a></li>
+                    <li><a href="python.html">Python</a></li>
+                    <li><a href="cpp.html">C++</a></li>
+                </ul>
+            </div>
+            <div class="footer__social__links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+
+        <div class="footer__container__lower">
+            <div class="footer__copyright">
+                © 2021-2022 Virtual Dom All rights reserved. Built with <i class="fas fa-heart"></i>
+            </div>
+            <div class="footer__credit">
+                Developed by Avinash
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- Icon to reach top -->
+    <a href="#" class="to__top" title="To_The_Top"><i class="fas fa-chevron-up"></i></a>
+
+
+    <script src="main.js"></script>
+    <script src="js/home.js"></script>
+    <script src="dark-light-mode-main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 100,
+            duration: 1000,
+        });
+    </script>
+</body>
+
+</html>

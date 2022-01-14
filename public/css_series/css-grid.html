@@ -1,0 +1,2109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#daedfb">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="shortcut icon" href="../favicon/favicon-virtual-dom.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/css.css">
+    <title> CSS GRID </title>
+</head>
+
+<body class="preload">
+
+    <!-- Preloader -->
+    <div id="preloader" class="preloader">
+        <div class="empty"></div>
+    </div>
+
+
+    <!-- Navigation Section-->
+    <header>
+        <nav class="navbar__container" id="navbar__container">
+            <div class="navbar__left">
+                <div class="navbar__logo">
+                    <a href="/"><img id="nav__logo" src="../common_component_image/virtual-dom-logo.svg" alt="LOGO"></a>
+                </div>
+                <div class="navbar__links" id="navbar__links">
+                    <ul class="navbar__links__inner" id="navbar__links__inner">
+                        <li><a id="home__link" href="/">Home</a></li>
+
+                        <li class="topics" id="topics"><span id="topics__link">Topics</span>
+                            <ul class="navbar__links__inner__dropdown" id="navbar__links__inner__dropdown">
+                                <li><a href="../javscript.html">Javascript</a></li>
+                                <li id="react"><a href="../react.html">React</a></li>
+                                <li id="css"><a class="active" href="../css.html">Css</a></li>
+                                <li id="blogs"><a href="../blogs.html">Blogs</a></li>
+                                <li id="python"><a href="../python.html">Python</a></li>
+                                <li id="cpp"><a href="../cpp.html">C++</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a id="about-us__link" href="../about_us.html">About us</a></li>
+
+                        <li><a id="contact__link" href="../contact_us.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navbar__right">
+
+                <!-- Dark mode Theme -->
+                <div class="theme__container__css">
+                    <input type="checkbox" id="theme__changer__css">
+                    <label for="theme__changer__css" class="theme__changer__label__css">
+                        <div class="theme__changer__track__css"></div>
+                    </label>
+                </div>
+
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+            <div class="hamburger__menu" id="hamburger__menu">
+                <div class="hamburger__menu__button" id="hamburger__menu__button"></div>
+            </div>
+        </nav>
+        <!-- overlay -->
+        <div class="nav__menu__overlay" id="nav__menu__overlay"></div>
+    </header>
+
+
+
+    <!-- Css Series Section -->
+    <main class="css__series__container">
+
+        <header class="css__series__title">
+            <div class="grid__logo">
+                <span class="grid__logo__item">C</span>
+                <span class="grid__logo__item">S</span>
+                <span class="grid__logo__item">S</span>
+                <span class="grid__logo__item"></span>
+                <span class="grid__logo__item"></span>
+                <span class="grid__logo__item">G</span>
+                <span class="grid__logo__item">R</span>
+                <span class="grid__logo__item">I</span>
+                <span class="grid__logo__item">D</span>
+            </div>
+        </header>
+
+        <article class="css__series__article">
+
+            <section class="grid__properties__container pad-primary bdr-btm">
+                <div class="grid__properties__main">
+
+                    <h2 class="grid__properties__title">
+                        GRID Properties
+                    </h2>
+
+                    <div class="grid__properties__parent-children">
+                        <div class="grid__properties__parent">
+                            <h4 class="parent__properties__title">
+                                <i class="fas fa-map-pin"></i> Parent or Grid Container Properties
+                            </h4>
+                            <div class="parent__properties__list">
+                                <ul>
+                                    <li><a href="#grid"><code>display:grid;</code></a></li>
+                                    <li><a href="#inline-grid"><code>display:inline-grid;</code></a></li>
+                                    <li><a href="#grid-template"><code>grid-template</code></a></li>
+                                    <li><a href="#grid-template-areas"><code>grid-template-areas</code></a></li>
+                                    <li><a href="#grid-template"><code>grid-template-columns</code></a></li>
+                                    <li><a href="#grid-template-rows"><code>grid-template-rows</code></a></li>
+                                    <li><a href="#gap"><code>gap</code></a></li>
+                                    <li><a href="#gap"><code>grid-column-gap</code></a></li>
+                                    <li><a href="#gap"><code>grid-row-gap</code></a></li>
+                                    <li><a href="#gap"><code>grid-gap</code></a></li>
+                                    <li><a href="#justify-items"><code>justify-items</code></a></li>
+                                    <li><a href="#align-items"><code>align-items</code></a></li>
+                                    <li><a href="#place-items"><code>place-items</code></a></li>
+                                    <li><a href="#justify-content"><code>justify-content</code></a></li>
+                                    <li><a href="#align-content"><code>align-content</code></a></li>
+                                    <li><a href="#place-content"><code>place-content</code></a></li>
+                                    <li><a href="#grid-auto-columns-rows"><code>grid-auto-columns</code></a></li>
+                                    <li><a href="#grid-auto-columns-rows"><code>grid-auto-rows</code></a></li>
+                                    <li><a href="#grid-auto-flow"><code>grid-auto-flow</code></a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="grid__properties__children">
+                            <h4 class="children__properties__title">
+                                <i class="fas fa-map-pin"></i> Children Properties
+                            </h4>
+                            <div class="children__properties__list">
+                                <ul>
+                                    <li><a href="#grid-column"><code>grid-column</code></a></li>
+                                    <li><a href="#grid-col-start-end"><code>grid-column-start</code></a></li>
+                                    <li><a href="#grid-col-start-end"><code>grid-column-end</code></a></li>
+                                    <li><a href="#grid-row-start-end"><code>grid-row</code></a></li>
+                                    <li><a href="#grid-row-start-end"><code>grid-row-start</code></a></li>
+                                    <li><a href="#grid-row-start-end"><code>grid-row-end</code></a></li>
+                                    <li><a href="#grid-area"><code>grid-area</code></a></li>
+                                    <li><a href="#justify-self"><code>justify-self</code></a></li>
+                                    <li><a href="#align-self"><code>align-self</code></a></li>
+                                    <li><a href="#place-self"><code>place-self</code></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+<section class="code__output__container pad-primary bdr-btm">
+<div class="code__output__main">
+
+<div class="code__output__left">
+
+<div class="code__section__main">       
+<div class="code__section">
+    <div class="upper">
+        <span class="title">HTML</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id1').innerText)"></span>
+    </div>
+<pre class="code">
+<code class="language-html" id="id1">
+&ltdiv class="parent"&gt
+    &ltspan class="child"&gt1&lt/span&gt
+    &ltspan class="child"&gt2&lt/span&gt
+    &ltspan class="child"&gt3&lt/span&gt
+    &ltspan class="child"&gt4&lt/span&gt
+    &ltspan class="child"&gt5&lt/span&gt
+    .
+    .
+    &ltspan class="child"&gt10&lt/span&gt
+&lt/div&gt
+</code>
+</pre>
+</div>
+</div>
+
+<div class="code__section__main">
+<div class="code__section">
+    <div class="upper">
+        <span class="title">css</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id2').innerText)"></span>
+    </div>
+<pre class="code">
+<code class="language-css" id="id2">
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+} 
+.child{
+    font-size: 3rem;
+    color: rgba(0, 0, 0, 0.767);
+}
+.child:nth-child(1){
+    background: rgba(248, 40, 40, 0.65);
+}
+.
+.
+.
+.child:nth-child(10){
+    background: rgb(227, 13, 235, 0.65);
+}
+</code>
+</pre>
+</div>
+</div>
+
+</div>
+
+<div class="code__output__right">
+
+    <div class="css__output">
+        <div class="parent one">
+            <span class="child">1</span>
+            <span class="child">2</span>
+            <span class="child">3</span>
+            <span class="child">4</span>
+            <span class="child">5</span>
+            <span class="child">6</span>
+            <span class="child">7</span>
+            <span class="child">8</span>
+            <span class="child">9</span>
+            <span class="child">10</span>
+        </div>
+    </div>
+
+<p class="para"><i class="far fa-dot-circle"></i> span is an inline element thats the reason we are seeing the output like this. </p>
+
+<p class="para note"><strong>NOTE -</strong> The moments when we do the <span class="text_uline">display:grid;</span> to the Grid-container or parent, the grid items or the children of parent are placed in rows because default behaviour of <span class="text_uline">grid-items</span> is rows and it takes full width of the grid container or parent. </p>
+
+</div>
+
+</div>
+</section>
+
+
+<section class="code__output__container pad-primary bdr-btm" id="grid">
+    <div class="code__output__main" >
+
+<div class="code__output__left">
+
+<strong><code>display:grid;</code></strong>
+
+<div class="code__section__main">
+<div class="code__section">
+    <div class="upper">
+        <span class="title">css</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id3').innerText)"></span>
+    </div>
+<pre class="code">
+<code class="language-css" id="id3">
+.parent{
+    display:grid;
+}
+.child{
+    text-align:center;
+}
+</code>
+</pre>
+</div>
+</div> 
+
+</div>
+
+<div class="code__output__right">
+
+    <h6 class="output">output</h6>
+
+    <div class="css__output">
+        <div class="parent two grid">
+            <span class="child">1</span>
+            <span class="child">2</span>
+            <span class="child">3</span>
+            <span class="child">4</span>
+            <span class="child">5</span>
+            <span class="child">6</span>
+            <span class="child">7</span>
+            <span class="child">8</span>
+            <span class="child">9</span>
+            <span class="child">10</span>
+        </div>
+    </div>
+
+    <p class="para note"><strong>NOTE -</strong> Generally we dont see any changes after giving the parent <span class="text_uline">display:grid;</span> properties. if we used div instead of span on the above children element we dont see any changes after <span class="text_uline">display:grid;</span>  </p>
+
+</div>
+
+    </div>
+</section>
+
+
+<section class="code__output__container pad-primary bdr-btm" id="inline-grid">
+    <div class="code__output__main">
+
+        <div class="code__output__left">
+            <strong><code>display:inline-grid;</code></strong>
+<div class="code__section__main">
+<div class="code__section">
+    <div class="upper">
+        <span class="title">css</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id4').innerText)"></span>
+    </div>
+<pre class="code">
+<code class="language-css" id="id4">
+.parent{
+    display:inline-grid;
+}
+</code>
+</pre>
+</div>
+</div>
+
+<p class="para note"><strong>NOTE - </strong><span class="text_uline">inline-grid</span> creates an inline-level of grid and <span class="text_uline">grid</span> creates a block-level of grid. </p>
+</div>
+
+        <div class="code__output__right">
+            <h6 class="output">output</h6>
+
+<div class="css__output">
+    <div class="parent three">
+        <span class="child">1</span>
+        <span class="child">2</span>
+        <span class="child">3</span>
+        <span class="child">4</span>
+        <span class="child">5</span>
+        <span class="child">6</span>
+        <span class="child">7</span>
+        <span class="child">8</span>
+        <span class="child">9</span>
+        <span class="child">10</span>
+    </div>
+</div>
+
+<div class="css__output">
+    <div class="parent three">
+        <span class="child">1</span>
+        <span class="child">2</span>
+        <span class="child">3</span>
+        <span class="child">4</span>
+        <span class="child">5</span>
+        <span class="child">child 6 content width</span>
+        <span class="child">7</span>
+        <span class="child">8</span>
+        <span class="child">9</span>
+        <span class="child">10</span>
+    </div>
+</div>
+        </div>
+    </div>
+</section>
+
+<h2 class="grid__properties__subtitle" id="grid-template">
+    GRID-Template
+</h2>
+
+<section class="code__output__container pad-secondry" >
+    <div class="code__output__main">
+
+        <div class="code__output__left">   
+<strong><code>grid-template-columns</code></strong>
+
+<div class="code__section__main">
+<div class="code__section">
+    <div class="upper">
+        <span class="title">css</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id5').innerText)"></span>
+    </div>
+<pre class="code">
+<code class="language-css" id="id5">
+.parent{
+    display:grid;
+    grid-template-columns: 3rem 3rem 3rem;
+    }
+</code>
+</pre>
+</div>       
+</div>
+
+<p class="para note"><strong>NOTE -</strong> we can use many units eg.. rem, px, %, em.</p>
+
+        </div>
+        
+        <div class="code__output__right">
+            <h6 class="output">output</h6>
+
+                <div class="css__output">
+                    <div class="parent four grid">
+                        <span class="child">1</span>
+                        <span class="child">2</span>
+                        <span class="child">3</span>
+                        <span class="child">4</span>
+                        <span class="child">5</span>
+                        <span class="child">6</span>
+                        <span class="child">7</span>
+                        <span class="child">8</span>
+                        <span class="child">9</span>
+                        <span class="child">10</span>
+                    </div>
+                </div>
+
+        
+        </div>
+
+    </div>
+</section>
+
+<section class="code__output__container pad-secondry">
+    <div class="code__output__main">
+        <div class="code__output__left">
+            <strong><code>grid-template-columns</code></strong>
+<div class="code__section__main">
+<div class="code__section">
+    <div class="upper">
+        <span class="title">css</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id6').innerText)"></span>
+    </div>
+<pre class="code">
+<code class="language-css" id="id6">
+.parent{
+    display:grid;
+    grid-template-columns: 25% 50% 25%;
+    }
+</code>
+</pre>
+</div>       
+</div>
+        </div>
+
+        <div class="code__output__right">
+            <h6 class="output">output</h6>
+                <div class="css__output">
+                    <div class="parent five grid">
+                        <span class="child">1</span>
+                        <span class="child">2</span>
+                        <span class="child">3</span>
+                        <span class="child">4</span>
+                        <span class="child">5</span>
+                        <span class="child">6</span>
+                        <span class="child">7</span>
+                        <span class="child">8</span>
+                        <span class="child">9</span>
+                        <span class="child">10</span>
+                    </div>
+                </div>
+        </div>
+    </div>
+</section>
+
+<section class="code__output__container pad-secondry">
+    <div class="code__output__main">
+        <div class="code__output__left">
+            <strong><code>grid-template-columns</code></strong>
+<div class="code__section__main">
+<div class="code__section">
+    <div class="upper">
+        <span class="title">css</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id7').innerText)"></span>
+    </div>
+<pre class="code">
+<code class="language-css" id="id7">
+.parent{
+    display:grid;
+    grid-template-columns: 3rem auto 3rem;
+    }
+</code>
+</pre>
+</div>       
+</div>
+                
+        </div>
+
+        <div class="code__output__right">
+            <h6 class="output">output</h6>
+                <div class="css__output">
+                    <div class="parent six grid">
+                        <span class="child">1</span>
+                        <span class="child">2</span>
+                        <span class="child">3</span>
+                        <span class="child">4</span>
+                        <span class="child">5</span>
+                        <span class="child">6</span>
+                        <span class="child">7</span>
+                        <span class="child">8</span>
+                        <span class="child">9</span>
+                        <span class="child">10</span>
+                    </div>
+                </div>
+        </div>
+    </div>
+</section>
+
+<section class="code__output__container pad-secondry">
+    <div class="code__output__main">
+        <div class="code__output__left">
+            <strong><code>grid-template-columns</code></strong>
+<div class="code__section__main">
+<div class="code__section">
+    <div class="upper">
+        <span class="title">css</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id8').innerText)"></span>
+    </div>
+<pre class="code">
+<code class="language-css" id="id8">
+.parent{
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr 1fr 1fr;
+    /* grid-template-columns: repeat(5, 1fr ); */
+    }
+</code>
+</pre>
+</div>       
+</div>
+        </div>
+
+        <div class="code__output__right">
+            <h6 class="output">output</h6>
+                <div class="css__output">
+                    <div class="parent seven grid">
+                        <span class="child">1</span>
+                        <span class="child">2</span>
+                        <span class="child">3</span>
+                        <span class="child">4</span>
+                        <span class="child">5</span>
+                        <span class="child">6</span>
+                        <span class="child">7</span>
+                        <span class="child">8</span>
+                        <span class="child">9</span>
+                        <span class="child">10</span>
+                    </div>
+                </div>
+        </div>
+    </div>
+</section>
+
+<section class="code__output__container pad-secondry" id="grid-template-rows">
+    <div class="code__output__main">
+        <div class="code__output__left">
+            <strong><code>grid-template-rows</code></strong>
+            
+<div class="code__section__main">
+<div class="code__section">
+    <div class="upper">
+        <span class="title">css</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id9').innerText)"></span>
+    </div>
+<pre class="code">
+<code class="language-css" id="id9">
+.parent{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows:repeat(4,100px);
+    }
+</code>
+</pre>
+</div>       
+</div>
+        </div>
+
+        <div class="code__output__right">
+            <h6 class="output">output</h6>
+            <div class="css__output">
+                <div class="parent seven-one grid">
+                    <span class="child">1</span>
+                    <span class="child">2</span>
+                    <span class="child">3</span>
+                    <span class="child">4</span>
+                    <span class="child">5</span>
+                    <span class="child">6</span>
+                    <span class="child">7</span>
+                    <span class="child">8</span>
+                    <span class="child">9</span>
+                    <span class="child">10</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="code__output__container pad-last bdr-btm">
+    <div class="code__output__main">
+        <div class="code__output__left">
+            <strong><code>grid-template-columns + grid-template-rows</code></strong>
+<div class="code__section__main">
+<div class="code__section">
+    <div class="upper">
+        <span class="title">css</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id10').innerText)"></span>
+    </div>
+<pre class="code">
+<code class="language-css" id="id10">
+.parent{
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    grid-template-rows:120px 120px;
+    }
+</code>
+</pre>
+</div>       
+</div>
+        </div>
+
+        <div class="code__output__right">
+            <h6 class="output">output</h6>
+            <div class="css__output">
+                <div class="parent eight grid gtc-repeat_3_1fr">
+                    <span class="child">1</span>
+                    <span class="child">2</span>
+                    <span class="child">3</span>
+                    <span class="child">4</span>
+                    <span class="child">5</span>
+                    <span class="child">6</span>
+                    <span class="child">7</span>
+                    <span class="child">8</span>
+                    <span class="child">9</span>
+                    <span class="child">10</span>
+                </div>
+            </div>
+            <p class="para note"><strong>NOTE -</strong> we have only defined 2 rows of 120px and 120px, only 2 rows have have that fixed height and rest are defined by its contents size.</p>
+        </div>
+    </div>
+</section>
+
+<h2 class="grid__properties__subtitle" id="gap">
+    Grid-gap
+</h2>
+
+<section class="code__output__container pad-secondry">
+    <div class="code__output__main">
+        <div class="code__output__left">
+            <strong><code>grid-row-gap + grid-column-gap</code></strong>
+
+<div class="code__section__main">
+<div class="code__section">
+    <div class="upper">
+        <span class="title">css</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id11').innerText)"></span>
+    </div>
+<pre class="code">
+<code class="language-css" id="id11">
+.parent{
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    grid-template-rows: 100px 200px 50px 100px;
+    grid-row-gap: 1rem;
+    grid-column-gap: 2rem;
+    }
+</code>
+</pre>
+</div>       
+</div>
+        </div>
+
+        <div class="code__output__right">
+            <h6 class="output">output</h6>
+
+            <div class="css__output">
+                <div class="parent nine grid gtc-repeat_3_1fr">
+                    <span class="child">1</span>
+                    <span class="child">2</span>
+                    <span class="child">3</span>
+                    <span class="child">4</span>
+                    <span class="child">5</span>
+                    <span class="child">6</span>
+                    <span class="child">7</span>
+                    <span class="child">8</span>
+                    <span class="child">9</span>
+                    <span class="child">10</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="code__output__container pad-last bdr-btm">
+    <div class="code__output__main">
+        <div class="code__output__left">
+            <strong><code>grid-gap + gap</code></strong>
+<div class="code__section__main">
+<div class="code__section">
+    <div class="upper">
+        <span class="title">css</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id12').innerText)"></span>
+    </div>
+<pre class="code">
+<code class="language-css" id="id12">
+.parent{
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    grid-template-rows:repeat(4, 100px);
+
+    /* Short Hand */
+    grid-gap:1rem 1rem; /* row-gap column-gap */
+    gap:1rem; /* row-gap column-gap */
+    }
+</code>
+</pre>
+</div>       
+</div>
+        </div>
+
+        <div class="code__output__right">
+            <h6 class="output">output</h6>
+
+            <div class="css__output">
+                <div class="parent ten grid gtc-repeat_3_1fr">
+                    <span class="child">1</span>
+                    <span class="child">2</span>
+                    <span class="child">3</span>
+                    <span class="child">4</span>
+                    <span class="child">5</span>
+                    <span class="child">6</span>
+                    <span class="child">7</span>
+                    <span class="child">8</span>
+                    <span class="child">9</span>
+                    <span class="child">10</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<h2 class="grid__properties__subtitle" id="justify-items">
+    Justify-items
+</h2>
+
+<section class="code__output__container pad-last bdr-btm">
+    <div class="code__output__main">
+        <div class="code__output__left">
+            <strong><code>justify-items</code></strong>
+
+<div class="code__section__main">
+<div class="code__section">
+    <div class="upper">
+        <span class="title">css</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id13').innerText)"></span>
+    </div>
+<pre class="code">
+<code class="language-css" id="id13">
+.parent{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr );
+
+ /* justify-items:start;
+    justify-items:end;
+    justify-items:center;
+    justify-items:stretch; */
+    }
+</code>
+</pre>
+</div>       
+</div>
+
+<p class="para note"><strong>NOTE -</strong> Items are positioned on row-axis. <span class="text_uline">start-start of row-axis</span>, <span class="text_uline">end-end of row-axis</span>, <span class="text_uline">center-center of row-axis</span>, <span class="text_uline">stretch-stretch is default</span></p>
+
+<strong><code>start</code></strong>
+
+<div class="css__output">
+    <div class="parent eleven grid gtc-repeat_4_1fr">
+        <span class="child">1</span>
+        <span class="child">2</span>
+        <span class="child">3</span>
+        <span class="child">4</span>
+        <span class="child">5</span>
+        <span class="child">6</span>
+        <span class="child">7</span>
+        <span class="child">8</span>
+        <span class="child">9</span>
+        <span class="child">10</span>
+    </div>
+</div>
+
+
+
+</div>
+
+        <div class="code__output__right">
+
+            <strong><code>end</code></strong>
+
+            <div class="css__output">
+                <div class="parent twelve grid gtc-repeat_4_1fr">
+                    <span class="child">1</span>
+                    <span class="child">2</span>
+                    <span class="child">3</span>
+                    <span class="child">4</span>
+                    <span class="child">5</span>
+                    <span class="child">6</span>
+                    <span class="child">7</span>
+                    <span class="child">8</span>
+                    <span class="child">9</span>
+                    <span class="child">10</span>
+                </div>
+            </div>
+
+            <strong><code>center</code></strong>
+
+            <div class="css__output">
+                <div class="parent thirteen grid gtc-repeat_4_1fr">
+                    <span class="child">1</span>
+                    <span class="child">2</span>
+                    <span class="child">3</span>
+                    <span class="child">4</span>
+                    <span class="child">5</span>
+                    <span class="child">6</span>
+                    <span class="child">7</span>
+                    <span class="child">8</span>
+                    <span class="child">9</span>
+                    <span class="child">10</span>
+                </div>
+            </div>
+
+            <strong><code>stretch</code></strong>
+
+            <div class="css__output">
+                <div class="parent fourteen grid gtc-repeat_4_1fr">
+                    <span class="child">1</span>
+                    <span class="child">2</span>
+                    <span class="child">3</span>
+                    <span class="child">4</span>
+                    <span class="child">5</span>
+                    <span class="child">6</span>
+                    <span class="child">7</span>
+                    <span class="child">8</span>
+                    <span class="child">9</span>
+                    <span class="child">10</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<h2 class="grid__properties__subtitle" id="align-items">
+    Align-items
+</h2>
+
+<section class="code__output__container pad-last bdr-btm">
+    <div class="code__output__main">
+        <div class="code__output__left">
+            <strong><code>align-items</code></strong>
+
+<div class="code__section__main">
+<div class="code__section">
+    <div class="upper">
+        <span class="title">css</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id14').innerText)"></span>
+    </div>
+<pre class="code">
+<code class="language-css" id="id14">
+.parent{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr );
+
+ /* align-items: start;
+    align-items: end;
+    align-items: center;
+    align-items: stretch; */
+    }
+</code>
+</pre>
+</div>       
+</div>
+                
+<p class="para note"><strong>NOTE -</strong> Items are positioned on column-axis. <span class="text_uline">start-start of column-axis</span>, <span class="text_uline">end-end of column-axis</span>, <span class="text_uline">center-center of column-axis</span>, <span class="text_uline">stretch-stretch is default</span></p>
+
+<strong><code>start</code></strong>
+
+<div class="css__output">
+    <div class="parent fifteen grid gtc-repeat_4_1fr">
+        <span class="child">1</span>
+        <span class="child">2</span>
+        <span class="child">3</span>
+        <span class="child">4</span>
+        <span class="child">5</span>
+        <span class="child">6</span>
+        <span class="child">7</span>
+        <span class="child">8</span>
+        <span class="child">9</span>
+        <span class="child">10</span>
+    </div>
+</div>
+        </div>
+
+        <div class="code__output__right">
+                <strong><code>end</code></strong>
+
+                <div class="css__output">
+                    <div class="parent sixteen grid gtc-repeat_4_1fr">
+                        <span class="child">1</span>
+                        <span class="child">2</span>
+                        <span class="child">3</span>
+                        <span class="child">4</span>
+                        <span class="child">5</span>
+                        <span class="child">6</span>
+                        <span class="child">7</span>
+                        <span class="child">8</span>
+                        <span class="child">9</span>
+                        <span class="child">10</span>
+                    </div>
+                </div>
+
+                <strong><code>center</code></strong>
+
+                <div class="css__output">
+                    <div class="parent seventeen grid gtc-repeat_4_1fr">
+                        <span class="child">1</span>
+                        <span class="child">2</span>
+                        <span class="child">3</span>
+                        <span class="child">4</span>
+                        <span class="child">5</span>
+                        <span class="child">6</span>
+                        <span class="child">7</span>
+                        <span class="child">8</span>
+                        <span class="child">9</span>
+                        <span class="child">10</span>
+                    </div>
+                </div>
+
+                <strong><code>stretch</code></strong>
+
+                <div class="css__output">
+                    <div class="parent eighteen grid gtc-repeat_4_1fr">
+                        <span class="child">1</span>
+                        <span class="child">2</span>
+                        <span class="child">3</span>
+                        <span class="child">4</span>
+                        <span class="child">5</span>
+                        <span class="child">6</span>
+                        <span class="child">7</span>
+                        <span class="child">8</span>
+                        <span class="child">9</span>
+                        <span class="child">10</span>
+                    </div>
+                </div>
+        </div>
+    </div>
+</section>
+
+<h2 class="grid__properties__subtitle" id="place-items">
+    Place-items
+</h2>
+
+<section class="code__output__container pad-last bdr-btm">
+    <div class="code__output__main">
+        <div class="code__output__left">
+            <strong><code>place-items</code></strong>
+
+<div class="code__section__main">
+<div class="code__section">
+    <div class="upper">
+        <span class="title">css</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id15').innerText)"></span>
+    </div>
+<pre class="code">
+<code class="language-css" id="id15">
+.parent{
+    place-items:center center;
+ /* place-items:center; */
+}
+ /* place-items:align-items | justify-items;*/
+</code>
+</pre>
+</div>       
+</div>
+                
+<p class="para note"><strong>NOTE -</strong> <span class="text_uline">place-items</span> is the shorthand of <span class="text_uline">align-items</span> and <span class="text_uline">justify-items</span> properties. Align grid items along the row- axis and column-axis. if we set only one properties, then it apply on both <span class="text_uline">align-items</span> and <span class="text_uline">justify-items</span>. </p>
+
+        </div>
+
+        <div class="code__output__right">
+            <h6 class="output">output</h6>
+            <div class="css__output">
+                <div class="parent place-items grid gtc-repeat_4_1fr">
+                    <span class="child">1</span>
+                    <span class="child">2</span>
+                    <span class="child">3</span>
+                    <span class="child">4</span>
+                    <span class="child">5</span>
+                    <span class="child">6</span>
+                    <span class="child">7</span>
+                    <span class="child">8</span>
+                    <span class="child">9</span>
+                    <span class="child">10</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<h2 class="grid__properties__subtitle" id="justify-content">
+    Justify-content
+</h2>
+
+<section class="code__output__container pad-last bdr-btm">
+    <div class="code__output__main">
+        <div class="code__output__left">
+            <strong><code>justify-content</code></strong>
+
+<div class="code__section__main">
+<div class="code__section">
+    <div class="upper">
+        <span class="title">css</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id16').innerText)"></span>
+    </div>
+<pre class="code">
+<code class="language-css" id="id16">
+.parent{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr );
+
+ /* Justify-content:start; 
+    Justify-content:end;     
+    Justify-content:center;     
+    Justify-content:stretch;     
+    Justify-content:space-around;     
+    Justify-content:space-between;     
+    Justify-content:space-evenly; */
+    }
+</code>
+</pre>
+</div>       
+</div>
+
+<p class="para note"><strong>NOTE -</strong> placed all Grid Content on row-axis when total grid-size is smaller than the parent or grid container </p>
+
+<strong><code>start</code></strong>
+
+<div class="css__output">
+    <div class="parent nineteen grid gtc-repeat_3_3rem">
+        <span class="child">1</span>
+        <span class="child">2</span>
+        <span class="child">3</span>
+        <span class="child">4</span>
+        <span class="child">5</span>
+        <span class="child">6</span>
+        <span class="child">7</span>
+        <span class="child">8</span>
+        <span class="child">9</span>
+        <span class="child">10</span>
+    </div>
+</div>
+
+<strong><code>end</code></strong>
+
+<div class="css__output">
+    <div class="parent twenty grid gtc-repeat_3_3rem">
+        <span class="child">1</span>
+        <span class="child">2</span>
+        <span class="child">3</span>
+        <span class="child">4</span>
+        <span class="child">5</span>
+        <span class="child">6</span>
+        <span class="child">7</span>
+        <span class="child">8</span>
+        <span class="child">9</span>
+        <span class="child">10</span>
+    </div>
+</div>
+
+<strong><code>center</code></strong>
+
+<div class="css__output">
+    <div class="parent twentyone grid gtc-repeat_3_3rem">
+        <span class="child">1</span>
+        <span class="child">2</span>
+        <span class="child">3</span>
+        <span class="child">4</span>
+        <span class="child">5</span>
+        <span class="child">6</span>
+        <span class="child">7</span>
+        <span class="child">8</span>
+        <span class="child">9</span>
+        <span class="child">10</span>
+    </div>
+</div>
+
+
+
+
+</div>
+
+        <div class="code__output__right">
+            <strong><code>stretch(default)</code></strong>
+
+            <div class="css__output">
+                <div class="parent twentytwo grid gtc-repeat_3_3rem">
+                    <span class="child">1</span>
+                    <span class="child">2</span>
+                    <span class="child">3</span>
+                    <span class="child">4</span>
+                    <span class="child">5</span>
+                    <span class="child">6</span>
+                    <span class="child">7</span>
+                    <span class="child">8</span>
+                    <span class="child">9</span>
+                    <span class="child">10</span>
+                </div>
+            </div>
+
+            <strong><code>space-around</code></strong>
+
+            <div class="css__output">
+                <div class="parent twentythree grid gtc-repeat_3_3rem">
+                    <span class="child">1</span>
+                    <span class="child">2</span>
+                    <span class="child">3</span>
+                    <span class="child">4</span>
+                    <span class="child">5</span>
+                    <span class="child">6</span>
+                    <span class="child">7</span>
+                    <span class="child">8</span>
+                    <span class="child">9</span>
+                    <span class="child">10</span>
+                </div>
+            </div>
+
+            <strong><code>space-between</code></strong>
+
+            <div class="css__output">
+                <div class="parent twentyfour grid gtc-repeat_3_3rem">
+                    <span class="child">1</span>
+                    <span class="child">2</span>
+                    <span class="child">3</span>
+                    <span class="child">4</span>
+                    <span class="child">5</span>
+                    <span class="child">6</span>
+                    <span class="child">7</span>
+                    <span class="child">8</span>
+                    <span class="child">9</span>
+                    <span class="child">10</span>
+                </div>
+            </div>
+
+            <strong><code>space-evenly</code></strong>
+
+            <div class="css__output">
+                <div class="parent twentyfive grid gtc-repeat_3_3rem">
+                    <span class="child">1</span>
+                    <span class="child">2</span>
+                    <span class="child">3</span>
+                    <span class="child">4</span>
+                    <span class="child">5</span>
+                    <span class="child">6</span>
+                    <span class="child">7</span>
+                    <span class="child">8</span>
+                    <span class="child">9</span>
+                    <span class="child">10</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<h2 class="grid__properties__subtitle" id="align-content">
+    Align-content
+</h2>
+
+<section class="code__output__container pad-last bdr-btm">
+    <div class="code__output__main">
+        <div class="code__output__left">
+<div class="code__section__main">
+<div class="code__section">
+    <div class="upper">
+        <span class="title">css</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id17').innerText)"></span>
+    </div>
+<pre class="code">
+<code class="language-css" id="id17">
+.parent{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr );
+
+ /* align-content:start; 
+    align-content:end;     
+    align-content:center;     
+    align-content:stretch;     
+    align-content:space-around;     
+    align-content:space-between;     
+    align-content:space-evenly; */
+    }
+</code>
+</pre>
+</div>       
+</div>
+
+<p class="para note"><strong>NOTE -</strong> placed all Grid Content on column-axis when total grid-size is smaller than the parent or grid container </p>
+        
+<strong><code>start</code></strong>
+
+<div class="css__output">
+    <div class="parent twentysix grid gtc-repeat_3_3rem">
+        <span class="child">1</span>
+        <span class="child">2</span>
+        <span class="child">3</span>
+        <span class="child">4</span>
+        <span class="child">5</span>
+        <span class="child">6</span>
+        <span class="child">7</span>
+        <span class="child">8</span>
+        <span class="child">9</span>
+        <span class="child">10</span>
+    </div>
+</div>
+
+<strong><code>end</code></strong>
+
+<div class="css__output">
+    <div class="parent twentyseven grid gtc-repeat_3_3rem">
+        <span class="child">1</span>
+        <span class="child">2</span>
+        <span class="child">3</span>
+        <span class="child">4</span>
+        <span class="child">5</span>
+        <span class="child">6</span>
+        <span class="child">7</span>
+        <span class="child">8</span>
+        <span class="child">9</span>
+        <span class="child">10</span>
+    </div>
+</div>
+
+<strong><code>center</code></strong>
+
+<div class="css__output">
+    <div class="parent twentyeight grid gtc-repeat_3_3rem">
+        <span class="child">1</span>
+        <span class="child">2</span>
+        <span class="child">3</span>
+        <span class="child">4</span>
+        <span class="child">5</span>
+        <span class="child">6</span>
+        <span class="child">7</span>
+        <span class="child">8</span>
+        <span class="child">9</span>
+        <span class="child">10</span>
+    </div>
+</div>
+
+
+</div>
+
+        <div class="code__output__right">
+            <strong><code>stretch</code></strong>
+
+            <div class="css__output">
+                <div class="parent twentynine grid gtc-repeat_3_3rem">
+                    <span class="child">1</span>
+                    <span class="child">2</span>
+                    <span class="child">3</span>
+                    <span class="child">4</span>
+                    <span class="child">5</span>
+                    <span class="child">6</span>
+                    <span class="child">7</span>
+                    <span class="child">8</span>
+                    <span class="child">9</span>
+                    <span class="child">10</span>
+                </div>
+            </div>
+
+            <strong><code>space-around</code></strong>
+
+            <div class="css__output">
+                <div class="parent thirty grid gtc-repeat_3_3rem">
+                    <span class="child">1</span>
+                    <span class="child">2</span>
+                    <span class="child">3</span>
+                    <span class="child">4</span>
+                    <span class="child">5</span>
+                    <span class="child">6</span>
+                    <span class="child">7</span>
+                    <span class="child">8</span>
+                    <span class="child">9</span>
+                    <span class="child">10</span>
+                </div>
+            </div>
+
+            <strong><code>space-between</code></strong>
+
+            <div class="css__output">
+                <div class="parent thirtyone grid gtc-repeat_3_3rem">
+                    <span class="child">1</span>
+                    <span class="child">2</span>
+                    <span class="child">3</span>
+                    <span class="child">4</span>
+                    <span class="child">5</span>
+                    <span class="child">6</span>
+                    <span class="child">7</span>
+                    <span class="child">8</span>
+                    <span class="child">9</span>
+                    <span class="child">10</span>
+                </div>
+            </div>
+
+            <strong><code>space-evenly</code></strong>
+
+            <div class="css__output">
+                <div class="parent thirtytwo grid gtc-repeat_3_3rem">
+                    <span class="child">1</span>
+                    <span class="child">2</span>
+                    <span class="child">3</span>
+                    <span class="child">4</span>
+                    <span class="child">5</span>
+                    <span class="child">6</span>
+                    <span class="child">7</span>
+                    <span class="child">8</span>
+                    <span class="child">9</span>
+                    <span class="child">10</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<h2 class="grid__properties__subtitle" id="place-content">
+    Place-content
+</h2>
+
+<section class="code__output__container pad-last bdr-btm">
+    <div class="code__output__main">
+        <div class="code__output__left">
+            <strong><code>place-content</code></strong>
+<div class="code__section__main">
+<div class="code__section">
+    <div class="upper">
+        <span class="title">css</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id18').innerText)"></span>
+    </div>
+<pre class="code">
+<code class="language-css" id="id18">
+.parent{
+    place-content:center center;
+}
+ /* place-content:align-content | justify-content;*/
+</code>
+</pre>
+</div>       
+</div>
+
+<p class="para note"><strong>NOTE -</strong> <span class="text_uline">place-content</span> is the shorthand of <span class="text_uline">align-content</span> and <span class="text_uline">justify-content</span> properties. </p>
+        
+
+
+</div>
+
+        <div class="code__output__right">
+            <h6 class="output">output</h6>
+            <div class="css__output">
+                <div class="parent place-content grid gtc-repeat_3_3rem">
+                    <span class="child">1</span>
+                    <span class="child">2</span>
+                    <span class="child">3</span>
+                    <span class="child">4</span>
+                    <span class="child">5</span>
+                    <span class="child">6</span>
+                    <span class="child">7</span>
+                    <span class="child">8</span>
+                    <span class="child">9</span>
+                    <span class="child">10</span>
+                </div>
+            </div>
+          
+        </div>
+    </div>
+</section>
+
+<h2 class="grid__properties__subtitle">
+    Children-Properties
+</h2>
+
+<section class="code__output__container pad-secondry" id="grid-col-start-end">
+    <div class="code__output__main">
+        <div class="code__output__left">
+            <p><strong><code>grid-column-start</code></strong> <strong><code>grid-column-end</code></strong></p>
+
+<div class="code__section__main">
+<div class="code__section">
+    <div class="upper">
+        <span class="title">css</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id19').innerText)"></span>
+    </div>
+<pre class="code">
+<code class="language-css" id="id19">
+.parent{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    }
+.parent .child:nth-child(1) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    
+    /* same as above */
+    grid-column-start: span 2;
+}
+</code>
+</pre>
+</div>       
+</div>
+
+        </div>
+
+        <div class="code__output__right">
+            <h6 class="output">output</h6>
+
+            <div class="css__output">
+                <div class="parent thirtythree grid gtc-repeat_3_1fr gap-sm">
+                    <span class="child">1</span>
+                    <span class="child">2</span>
+                    <span class="child">3</span>
+                    <span class="child">4</span>
+                    <span class="child">5</span>
+                    <span class="child">6</span>
+                    <span class="child">7</span>
+                    <span class="child">8</span>
+                    <span class="child">9</span>
+                    <span class="child">10</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="code__output__container pad-secondry" id="grid-column">
+    <div class="code__output__main">
+        <div class="code__output__left">
+            <strong><code>grid-column</code></strong>
+
+<div class="code__section__main">
+<div class="code__section">
+    <div class="upper">
+        <span class="title">css</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id20').innerText)"></span>
+    </div>
+<pre class="code">
+<code class="language-css" id="id20">
+.parent .child:nth-child(3) {
+    grid-column: 1/4; /* grid-col-start / grid-col-end */
+}
+.parent .child:nth-child(10) {
+    grid-column: 1/-1;  /* grid-col-start / till the last col. of line */
+    }
+</code>
+</pre>
+</div>       
+</div>
+
+        </div>
+
+        <div class="code__output__right">
+            <h6 class="output">output</h6>
+
+            <div class="css__output">
+                <div class="parent thirtyfour grid gtc-repeat_3_1fr gap-sm">
+                    <span class="child">1</span>
+                    <span class="child">2</span>
+                    <span class="child">3</span>
+                    <span class="child">4</span>
+                    <span class="child">5</span>
+                    <span class="child">6</span>
+                    <span class="child">7</span>
+                    <span class="child">8</span>
+                    <span class="child">9</span>
+                    <span class="child">10</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="code__output__container pad-secondry" id="grid-row-start-end">
+    <div class="code__output__main">
+        <div class="code__output__left">
+            <p><strong><code>grid-row</code></strong> <strong><code>grid-row-start</code></strong> <strong><code>grid-row-end</code></strong></p>
+
+<div class="code__section__main">
+<div class="code__section">
+    <div class="upper">
+        <span class="title">css</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id21').innerText)"></span>
+    </div>
+<pre class="code">
+<code class="language-css" id="id21">
+.parent .child:nth-child(1) {
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.parent .child:nth-child(5) {
+    grid-row: span 3;
+}
+.parent .child:nth-child(7) {
+    grid-row:3/5;
+}
+</code>
+</pre>
+</div>       
+</div>
+        </div>
+
+        <div class="code__output__right">
+            <h6 class="output">output</h6>
+
+            <div class="css__output">
+                <div class="parent thirtyfive grid gtc-repeat_3_1fr gap-sm">
+                    <span class="child">1</span>
+                    <span class="child">2</span>
+                    <span class="child">3</span>
+                    <span class="child">4</span>
+                    <span class="child">5</span>
+                    <span class="child">6</span>
+                    <span class="child">7</span>
+                    <span class="child">8</span>
+                    <span class="child">9</span>
+                    <span class="child">10</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="code__output__container pad-secondry">
+    <div class="code__output__main">
+        <div class="code__output__left">
+            <strong><code>grid-row + grid-column</code></strong>
+
+<div class="code__section__main">
+<div class="code__section">
+    <div class="upper">
+        <span class="title">css</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id22').innerText)"></span>
+    </div>
+<pre class="code">
+<code class="language-css" id="id22">
+.parent .child:nth-child(4) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+</code>
+</pre>
+</div>       
+</div>
+        </div>
+
+        <div class="code__output__right">
+            <h6 class="output">output</h6>
+    
+            <div class="css__output">
+                <div class="parent thirtysix grid gtc-repeat_3_1fr gap-sm">
+                    <span class="child">1</span>
+                    <span class="child">2</span>
+                    <span class="child">3</span>
+                    <span class="child">4</span>
+                    <span class="child">5</span>
+                    <span class="child">6</span>
+                    <span class="child">7</span>
+                    <span class="child">8</span>
+                    <span class="child">9</span>
+                    <span class="child">10</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="code__output__container pad-secondry">
+    <div class="code__output__main">
+        <div class="code__output__left">
+            <strong><code>grid-row + grid-column</code></strong>
+
+<div class="code__section__main">
+<div class="code__section">
+    <div class="upper">
+        <span class="title">css</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id23').innerText)"></span>
+    </div>
+<pre class="code">
+<code class="language-css" id="id23">
+.parent .child:nth-child(5) {
+    grid-column: 2 / span 2;
+    grid-row: 1 / span 3;
+}
+</code>
+</pre>
+</div>       
+</div>
+        </div>
+
+        <div class="code__output__right">
+            <h6 class="output">output</h6>
+    
+            <div class="css__output mb-md">
+                <div class="parent thirtyseven grid gtc-repeat_3_1fr gap-sm">
+                    <span class="child">1</span>
+                    <span class="child">2</span>
+                    <span class="child">3</span>
+                    <span class="child">4</span>
+                    <span class="child">5</span>
+                    <span class="child">6</span>
+                    <span class="child">7</span>
+                    <span class="child">8</span>
+                    <span class="child">9</span>
+                    <span class="child">10</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="code__output__container pad-last bdr-btm" id="grid-area">
+    <div class="code__output__main">
+        <div class="code__output__left">
+            <strong><code>grid-area</code></strong>
+
+<div class="code__section__main">
+<div class="code__section">
+    <div class="upper">
+        <span class="title">css</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id24').innerText)"></span>
+    </div>
+<pre class="code">
+<code class="language-css" id="id24">
+.parent .child:nth-child(4){
+    grid-area: 2/2/5/4;
+ /* grid-row-start: 2;
+    grid-column-start: 2;
+    grid-row-end: 5;
+    grid-column-end: 4; */
+}
+</code>
+</pre>
+</div>       
+</div>
+
+<p class="para note"><strong>Note -</strong> <span class="text_uline">grid-area</span> can be referenced as the properties name passed from the <span class="text_uline">grid-template-areas</span>. Also the shorthand of <span class="text_uline">grid-row-start</span> | <span class="text_uline">grid-column-start</span> | <span class="text_uline">grid-row-end</span> | <span class="text_uline">grid-column-end</span> .</p>
+        </div>
+
+        <div class="code__output__right">
+            <h6 class="output">output</h6>
+    
+            <div class="css__output">
+                <div class="parent grid-area grid gtc-repeat_3_1fr gap-sm">
+                    <span class="child">1</span>
+                    <span class="child">2</span>
+                    <span class="child">3</span>
+                    <span class="child">4</span>
+                    <span class="child">5</span>
+                    <span class="child">6</span>
+                    <span class="child">7</span>
+                    <span class="child">8</span>
+                    <span class="child">9</span>
+                    <span class="child">10</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<h2 class="grid__properties__subtitle" id="justify-self">
+    Justify-self
+</h2>
+
+<section class="code__output__container pad-last bdr-btm">
+    <div class="code__output__main">
+        <div class="code__output__left">
+            <strong><code>justify-self</code></strong>
+
+<div class="code__section__main">
+<div class="code__section">
+    <div class="upper">
+        <span class="title">css</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id25').innerText)"></span>
+    </div>
+<pre class="code">
+<code class="language-css" id="id25">
+.parent .child:nth-child(1) {
+    justify-self: start;
+    }
+.parent .child:nth-child(3) {
+    justify-self: end;
+    }
+.parent .child:nth-child(5) {
+    justify-self: center;
+    }     
+    /* stretch is default */
+</code>
+</pre>
+</div>       
+</div>
+
+<p class="para"><i class="far fa-dot-circle"></i> Align individuals item along row-axis.</p>
+
+        </div>
+
+        <div class="code__output__right">
+            <h6 class="output">output</h6>
+
+            <div class="css__output mb-md">
+                <div class="parent thirtyeight grid gtc-repeat_3_1fr gap-sm">
+                    <span class="child">1</span>
+                    <span class="child">2</span>
+                    <span class="child">3</span>
+                    <span class="child">4</span>
+                    <span class="child">5</span>
+                    <span class="child">6</span>
+                    <span class="child">7</span>
+                    <span class="child">8</span>
+                    <span class="child">9</span>
+                    <span class="child">10</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<h2 class="grid__properties__subtitle" id="align-self">
+    Align-self
+</h2>
+
+<section class="code__output__container pad-last bdr-btm">
+    <div class="code__output__main">
+        <div class="code__output__left">
+
+            <strong><code>align-self</code></strong>
+<div class="code__section__main">
+<div class="code__section">
+    <div class="upper">
+        <span class="title">css</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id26').innerText)"></span>
+    </div>
+<pre class="code">
+<code class="language-css" id="id26">
+.parent .child:nth-child(1) {
+    align-self: start;
+    }
+.parent .child:nth-child(4) {
+    align-self: end;
+    }
+.parent .child:nth-child(6) {
+    align-self: center;
+    }
+    /* stretch is default */
+</code>
+</pre>
+</div>       
+</div>
+
+<p class="para"><i class="far fa-dot-circle"></i> Align individuals item along column-axis.</p>
+
+        </div>
+
+        <div class="code__output__right">
+            <h6 class="output">output</h6>
+
+            <div class="css__output">
+                <div class="parent thirtynine grid gtc-repeat_3_1fr gap-sm">
+                    <span class="child">1</span>
+                    <span class="child">2</span>
+                    <span class="child">3</span>
+                    <span class="child">4</span>
+                    <span class="child">5</span>
+                    <span class="child">6</span>
+                    <span class="child">7</span>
+                    <span class="child">8</span>
+                    <span class="child">9</span>
+                    <span class="child">10</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<h2 class="grid__properties__subtitle" id="place-self">
+    Place-self
+</h2>
+
+<section class="code__output__container pad-last bdr-btm">
+    <div class="code__output__main">
+        <div class="code__output__left">
+
+            <strong><code>place-self</code></strong>
+<div class="code__section__main">
+<div class="code__section">
+    <div class="upper">
+        <span class="title">css</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id27').innerText)"></span>
+    </div>
+<pre class="code">
+<code class="language-css" id="id27">
+.parent .child:nth-child(5){
+    place-self:center;
+}
+.parent .child:nth-child(7){
+    place-self:center;
+}
+/* place-self:align-self | justify-self;*/
+</code>
+</pre>
+</div>       
+</div>
+
+<p class="para note"><strong>Note - </strong><span class="text_uline">place-self</span> is the shorthand of <span class="text_uline">align-self</span> and <span class="text_uline">justify-self</span>.</p>
+
+        </div>
+
+        <div class="code__output__right">
+            <h6 class="output">output</h6>
+
+            <div class="css__output">
+                <div class="parent place-self grid gtc-repeat_3_1fr gap-sm">
+                    <span class="child">1</span>
+                    <span class="child">2</span>
+                    <span class="child">3</span>
+                    <span class="child">4</span>
+                    <span class="child">5</span>
+                    <span class="child">6</span>
+                    <span class="child">7</span>
+                    <span class="child">8</span>
+                    <span class="child">9</span>
+                    <span class="child">10</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<h2 class="grid__properties__subtitle" id="grid-template-areas">
+    Grid-Template-Areas
+</h2>
+
+<section class="code__output__container pad-last bdr-btm">
+    <div class="code__output__main">
+        <div class="code__output__left">
+
+            <strong><code>grid-template-areas</code></strong>
+
+<div class="code__section__main">
+<div class="code__section">
+    <div class="upper">
+        <span class="title">css</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id28').innerText)"></span>
+    </div>
+<pre class="code">
+<code class="language-css" id="id28">
+.parent{
+    grid-template-columns: repeat(3,1fr );
+    grid-template-areas:
+        'header header header'
+        'main-content main-content sidebar'
+        'about about sidebar'
+        'footer footer footer';
+}
+.parent .child:nth-child(1){
+    grid-area:header;
+}
+.parent .child:nth-child(2){
+    grid-area:main-content;
+}
+.parent .child:nth-child(3){
+    grid-area:sidebar;
+}
+.parent .child:nth-child(4){
+    grid-area:about;
+}
+.parent .child:nth-child(5){
+    grid-area:footer;
+}
+</code>
+</pre>
+</div>       
+</div>
+
+<strong><code>grid-template</code></strong>
+<p class="para note"><strong>Note -</strong> <span class="text_uline">grid-template</span> is the shorthand of <span class="text_uline">grid-template-areas</span> | <span class="text_uline">grid-template-rows</span> | <span class="text_uline">grid-template-columns</span>.</p>
+
+
+</div>
+
+        <div class="code__output__right">
+            <h6 class="output">output</h6>
+
+            <div class="css__output">
+                <div class="parent fourty grid gap-sm">
+                    <span class="child">Header</span>
+                    <span class="child">Main Content</span>
+                    <span class="child">Siderbar</span>
+                    <span class="child">About</span>
+                    <span class="child">Footer</span>
+                </div>
+            </div>
+
+            <p class="para note"><strong>Note -</strong> <span class="text_uline">grid-template-areas</span> is pretty powerfull. you just have to assign the excat layout forms in quote(' '), then passed to children in the form of grid-area.</p>
+        </div>
+    </div>
+</section>
+
+<h2 class="grid__properties__subtitle" id="grid-auto-columns-rows">
+    Implicit-Grid
+</h2>
+
+<section class="code__output__container pad-last bdr-btm">
+    <div class="code__output__main">
+        <div class="code__output__left">
+            <p class="para"><strong><code>grid-auto-columns</code></strong> <strong><code>grid-auto-rows</code></strong></p>
+
+<div class="code__section__main">
+<div class="code__section">
+    <div class="upper">
+        <span class="title">css</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id29').innerText)"></span>
+    </div>
+<pre class="code">
+<code class="language-css" id="id29">
+.parent {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows:5rem 5rem;
+    grid-auto-rows:10rem;
+    }
+</code>
+</pre>
+</div>       
+</div>
+
+<p class="para note"><strong>Note - </strong>we have specified only 2 rows of 5rem and 5rem and rest grid-items are implicitly created by <span class="text_uline">grid-auto-rows</span>  .</p>
+
+        </div>
+
+        <div class="code__output__right">
+            <h6 class="output">output</h6>
+
+            <div class="css__output">
+                <div class="parent fourtyone grid gap-sm">
+                    <span class="child">5 rem</span>
+                    <span class="child">5 rem</span>
+                    <span class="child">5 rem</span>
+                    <span class="child">5 rem</span>
+                    <span class="child">5 rem</span>
+                    <span class="child">5 rem</span>
+                    <span class="child">10 rem</span>
+                    <span class="child">10 rem</span>
+                    <span class="child">10 rem</span>
+                    <span class="child">10 rem</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<h2 class="grid__properties__subtitle" id="grid-auto-flow">
+    Grid-auto-flow
+</h2>
+
+<section class="code__output__container pad-secondry">
+    <div class="code__output__main">
+        <div class="code__output__left">
+            <p class="para"><strong><code>row (default)</code></strong></p>
+
+<div class="code__section__main">
+<div class="code__section">
+    <div class="upper">
+        <span class="title">css</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id30').innerText)"></span>
+    </div>
+<pre class="code">
+<code class="language-css" id="id30">
+.parent{
+    grid-auto-flow:row;
+    }
+</code>
+</pre>
+</div>       
+</div>
+
+        </div>
+
+        <div class="code__output__right">
+            <h6 class="output">output</h6>
+
+            <div class="css__output">
+                <div class="parent flow-row grid gap-sm">
+                    <span class="child">1</span>
+                    <span class="child">2</span>
+                    <span class="child">3</span>
+                    <span class="child">4</span>
+                    <span class="child">5</span>
+                    <span class="child">6</span>
+                    <span class="child">7</span>
+                    <span class="child">8</span>
+                    <span class="child">9</span>
+                    <span class="child">10</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="code__output__container pad-last bdr-btm">
+    <div class="code__output__main">
+        <div class="code__output__left">
+            <p class="para"><strong><code>column</code></strong></p>
+
+<div class="code__section__main">
+<div class="code__section">
+    <div class="upper">
+        <span class="title">css</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id31').innerText)"></span>
+    </div>
+<pre class="code">
+<code class="language-css" id="id31">
+.parent{
+    grid-auto-flow:column;
+    }
+</code>
+</pre>
+</div>       
+</div>
+
+<p class="para note"><strong>Note - </strong> <span class="text_uline">grid-auto-flow</span> can have 3 value  <span class="text_uline">row</span> | <span class="text_uline">column</span> | <span class="text_uline">dense</span> . dense is auto-placement algorithm, we will notice this when we have different grid-area or a image carousel then we can see change in the  visual order of our items. </p>
+
+</div>
+
+        <div class="code__output__right">
+            <h6 class="output">output</h6>
+
+            <div class="css__output">
+                <div class="parent flow-column grid gap-sm">
+                    <span class="child">1</span>
+                    <span class="child">2</span>
+                    <span class="child">3</span>
+                    <span class="child">4</span>
+                    <span class="child">5</span>
+                    <span class="child">6</span>
+                    <span class="child">7</span>
+                    <span class="child">8</span>
+                    <span class="child">9</span>
+                    <span class="child">10</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+        </article>
+    </main>
+
+
+
+    <!-- Footer section -->
+    <footer class="footer__container">
+
+        <div class="footer__container__upper">
+            <div class="footer__logo">
+                <a href="/"><img id="footer__logo" src="../common_component_image/virtual-dom-logo.svg" alt="LOGO"></a>
+            </div>
+            <div class="footer__main__links">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="../about_us.html">About Us</a></li>
+                    <li><a href="../contact_us.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer__main__topics__links">
+                <ul>
+                    <li class="footer__main__topics__links__title">Topics</li>
+                    <li><a href="../javscript.html">Javascript</a></li>
+                    <li><a href="../react.html">React</a></li>
+                    <li><a href="../css.html">Css</a></li>
+                    <li><a href="../blogs.html">Blogs</a></li>
+                    <li><a href="../python.html">Python</a></li>
+                    <li><a href="../cpp.html">C++</a></li>
+                </ul>
+            </div>
+            <div class="footer__social__links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+
+        <div class="footer__container__lower">
+            <div class="footer__copyright">
+                © 2021-2022 Virtual Dom All rights reserved. Built with <i class="fas fa-heart"></i>
+            </div>
+            <div class="footer__credit">
+                Developed by Avinash
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- Icon to reach top -->
+    <a href="#" class="to__top"><i class="fas fa-chevron-up"></i></a>
+
+    <script src="../main.js"></script>
+    <script src="../js/css.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#daedfb">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="shortcut icon" href="../favicon/favicon-virtual-dom.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/javascript.css">
+    <title>Map Method in Javascript</title>
+</head>
+
+<body class="preload">
+
+    <div id="preloader" class="preloader">
+        <div class="empty"></div>
+    </div>
+
+
+    <!-- Navigation Section-->
+    <header>
+        <nav class="navbar__container" id="navbar__container">
+            <div class="navbar__left">
+                <div class="navbar__logo">
+                    <a href="/"><img id="nav__logo" src="../common_component_image/virtual-dom-logo.svg"
+                            alt="LOGO"></a>
+                </div>
+                <div class="navbar__links" id="navbar__links">
+                    <ul class="navbar__links__inner" id="navbar__links__inner">
+                        <li><a id="home__link" href="/">Home</a></li>
+
+                        <li class="topics" id="topics"><span id="topics__link">Topics</span>
+                            <ul class="navbar__links__inner__dropdown" id="navbar__links__inner__dropdown">
+                                <li><a class="active" href="../javscript.html">Javascript</a></li>
+                                <li id="react"><a href="../react.html">React</a></li>
+                                <li id="css"><a href="../css.html">Css</a></li>
+                                <li id="blogs"><a href="../blogs.html">Blogs</a></li>
+                                <li id="python"><a href="../python.html">Python</a></li>
+                                <li id="cpp"><a href="../cpp.html">C++</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a id="about-us__link" href="../about_us.html">About us</a></li>
+
+                        <li><a id="contact__link" href="../contact_us.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navbar__right">
+
+                <!-- Dark mode Theme -->
+                <div class="theme__container__js">
+                    <input type="checkbox" id="theme__changer__js">
+                    <label for="theme__changer__js" class="theme__changer__label__js">
+                        <div class="theme__changer__track__js"></div>
+                    </label>
+                </div>
+
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+            <div class="hamburger__menu" id="hamburger__menu">
+                <div class="hamburger__menu__button" id="hamburger__menu__button"></div>
+            </div>
+        </nav>
+        <!-- overlay -->
+        <div class="nav__menu__overlay" id="nav__menu__overlay"></div>
+    </header>
+
+
+    <!-- Javascript Series Section -->
+    <main class="javascript__series__section">
+        <h2 class="javascript__series__title">
+            Map Method in Javascript
+        </h2>
+        <article class="javascript__series__main">
+
+            <p><span class="bold">#</span>  map always makes new Array
+            </p>
+            
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id1').innerText)"></span>
+    </div>
+<pre class="javascript__code">
+<code class="language-javascript" id="id1">
+const numbers = [8,9,6,4];
+
+const square =  function(number) {
+    return number * number
+}
+
+const squareNumber = numbers.map(square);
+console.log(squareNumber);
+
+// (4) [64, 81, 36, 16]
+</code>
+</pre>
+</div>
+
+
+
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id2').innerText)"></span>
+    </div>
+<pre class="javascript__code">
+<code class="language-javascript" id="id2">
+// Arrow Function
+
+const squareNumber = numbers.map((number) => {
+    return number * number
+})
+
+console.log(squareNumber);
+
+// (4) [64, 81, 36, 16]    
+</code>
+</pre>
+</div>
+
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id3').innerText)"></span>
+    </div>
+<pre class="javascript__code">
+<code class="language-javascript" id="id3">
+const users = [
+    {firstName:"Avinash",age:20},
+    {firstName:"Sumit",age:21},
+    {firstName:"Sonam",age:23},
+    {firstName:"Mohit",age:30}
+]
+
+const userAges = users.map((user) => {
+    return user.age;
+})
+
+console.log(userAges);
+
+// (4) [20, 21, 23, 30]
+</code>
+</pre>
+</div>
+
+
+
+        </article>
+    </main>
+
+    <!-- Button class -->
+    <section class="button__class__main">
+        <button class="button__class prev">
+            <a href="">Prev</a>
+        </button>
+        <button class="button__class next">
+            <a href="">Next</a>
+        </button>
+    </section>
+
+    <!-- Footer section -->
+    <footer class="footer__container">
+
+        <div class="footer__container__upper">
+            <div class="footer__logo">
+                <a href="/"><img id="footer__logo" src="../common_component_image/virtual-dom-logo.svg"
+                        alt="LOGO"></a>
+            </div>
+            <div class="footer__main__links">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="../about_us.html">About Us</a></li>
+                    <li><a href="../contact_us.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer__main__topics__links">
+                <ul>
+                    <li class="footer__main__topics__links__title">Topics</li>
+                    <li><a href="../javscript.html">Javascript</a></li>
+                    <li><a href="../react.html">React</a></li>
+                    <li><a href="../css.html">Css</a></li>
+                    <li><a href="../blogs.html">Blogs</a></li>
+                    <li><a href="../python.html">Python</a></li>
+                    <li><a href="../cpp.html">C++</a></li>
+                </ul>
+            </div>
+            <div class="footer__social__links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+
+        <div class="footer__container__lower">
+            <div class="footer__copyright">
+                © 2021-2022 Virtual Dom All rights reserved. Built with <i class="fas fa-heart"></i>
+            </div>
+            <div class="footer__credit">
+                Developed by Avinash
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- Icon to reach top -->
+    <a href="#" class="to__top"><i class="fas fa-chevron-up"></i></a>
+
+    <script src="../main.js"></script>
+    <script src="../js/javascript.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+
+</body>
+
+</html>

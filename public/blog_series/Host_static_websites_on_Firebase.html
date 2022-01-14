@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#daedfb">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="shortcut icon" href="../favicon/favicon-virtual-dom.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/blog.css">
+    <title>How to Host static websites on Firebase ?</title>
+</head>
+
+<body class="preload">
+
+    <div id="preloader" class="preloader">
+        <div class="empty"></div>
+    </div>
+
+    <!-- Navigation Section-->
+    <header>
+        <nav class="navbar__container" id="navbar__container">
+            <div class="navbar__left">
+                <div class="navbar__logo">
+                    <a href="/"><img id="nav__logo" src="../common_component_image/virtual-dom-logo.svg"
+                            alt="LOGO"></a>
+                </div>
+                <div class="navbar__links" id="navbar__links">
+                    <ul class="navbar__links__inner" id="navbar__links__inner">
+                        <li><a id="home__link" href="/">Home</a></li>
+
+                        <li class="topics" id="topics"><span id="topics__link">Topics</span>
+                            <ul class="navbar__links__inner__dropdown" id="navbar__links__inner__dropdown">
+                                <li><a href="../javscript.html">Javascript</a></li>
+                                <li id="react"><a href="../react.html">React</a></li>
+                                <li id="css"><a href="../css.html">Css</a></li>
+                                <li id="blogs"><a class="active" href="../blogs.html">Blogs</a></li>
+                                <li id="python"><a href="../python.html">Python</a></li>
+                                <li id="cpp"><a href="../cpp.html">C++</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a id="about-us__link" href="../about_us.html">About us</a></li>
+
+                        <li><a id="contact__link" href="../contact_us.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navbar__right">
+
+                 <!-- Dark mode Theme -->
+                 <div class="theme__container__blog">
+                    <input type="checkbox" id="theme__changer__blog">
+                    <label for="theme__changer__blog" class="theme__changer__label__blog">
+                        <div class="theme__changer__track__blog"></div>
+                    </label>
+                </div>
+                
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+            <div class="hamburger__menu" id="hamburger__menu">
+                <div class="hamburger__menu__button" id="hamburger__menu__button"></div>
+            </div>
+        </nav>
+        <!-- overlay -->
+        <div class="nav__menu__overlay" id="nav__menu__overlay"></div>
+    </header>
+
+    <!-- Blog List Button -->
+    <div class="blog__list__button" id="blog__list__button">
+        <i class="fas fa-chevron-right" id="blog__list__button__icon"></i>
+    </div>
+
+    <!--Common Blog Markup -->
+    <section class="common__blog__markup">
+        
+        <!-- Blog list -->
+        <div class="blog__list__left" id="blog__list__left">
+            <h2 class="blog__list__title">
+                Blogs
+            </h2>
+            <div class="blog__list__link">
+                <a href="Host_static_websites_on_Firebase.html">1. How to Host static websites on Firebase ?</a>
+                <a href="Top_10_Best_Themes_for_VS_code.html">2. Top 10 Best Themes for VS code</a>
+                <a href="Keyboard_shortcuts.html">3. Keyboard shortcuts to increase your productivity</a>
+            </div>
+        </div>
+
+        <!-- Blogs Series Section -->
+        <main class="blog__series__section">
+            <h2 class="blog__series__title">
+                How to Host static websites on Firebase ?
+            </h2>
+            <article class="blog__series__main">
+
+
+                <h6 class="subtitle">Just follow the steps below..</h6>
+
+                <div class="blog__series__image">
+                    <img src="../blog_card_image/firebase-1.svg" alt="">
+                </div>
+
+                <div class="blog__series__image">
+                    <img src="../blog_card_image/firebase-2.svg" alt="">
+                </div>
+
+                <div class="blog__series__image">
+                    <img src="../blog_card_image/firebase-3.svg" alt="">
+                </div>
+
+                <div class="blog__series__image">
+                    <img src="../blog_card_image/firebase-4.svg" alt="">
+                </div>
+
+                <div class="blog__series__image">
+                    <img src="../blog_card_image/firebase-5.svg" alt="">
+                </div>
+
+                <div class="blog__series__image">
+                    <img src="../blog_card_image/firebase-6.svg" alt="">
+                </div>
+
+
+            </article>
+        </main>
+
+        <!-- Trending list -->
+        <aside class="blog__list__right">
+
+        </aside>
+
+    </section>
+
+
+    <!-- Button class -->
+    <section class="button__class__main">
+        <button class="button__class prev">
+            <a href="../blogs.html">Prev</a>
+        </button>
+        <button class="button__class next">
+            <a href="Top_10_Best_Themes_for_VS_code.html">Next</a>
+        </button>
+    </section>
+
+
+     <!-- Footer section -->
+     <footer class="footer__container">
+
+        <div class="footer__container__upper">
+            <div class="footer__logo">
+                <a href="/"><img id="footer__logo" src="../common_component_image/virtual-dom-logo.svg"
+                        alt="LOGO"></a>
+            </div>
+            <div class="footer__main__links">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="../about_us.html">About Us</a></li>
+                    <li><a href="../contact_us.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer__main__topics__links">
+                <ul>
+                    <li class="footer__main__topics__links__title">Topics</li>
+                    <li><a href="../javscript.html">Javascript</a></li>
+                    <li><a href="../react.html">React</a></li>
+                    <li><a href="../css.html">Css</a></li>
+                    <li><a href="../blogs.html">Blogs</a></li>
+                    <li><a href="../python.html">Python</a></li>
+                    <li><a href="../cpp.html">C++</a></li>
+                </ul>
+            </div>
+            <div class="footer__social__links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+
+        <div class="footer__container__lower">
+            <div class="footer__copyright">
+                © 2021-2022 Virtual Dom All rights reserved. Built with <i class="fas fa-heart"></i>
+            </div>
+            <div class="footer__credit">
+                 Developed by Avinash
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- Icon to reach top -->
+    <a href="#" class="to__top"><i class="fas fa-chevron-up"></i></a>
+
+
+    <script src="../js/blog.js"></script>
+    <script src="../main.js"></script>
+    
+</body>
+
+</html>
+

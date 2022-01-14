@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#daedfb">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="shortcut icon" href="../favicon/favicon-virtual-dom.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/javascript.css">
+    <title> Object in Javascript </title>
+</head>
+
+<body class="preload">
+
+    <div id="preloader" class="preloader">
+        <div class="empty"></div>
+    </div>
+
+
+    <!-- Navigation Section-->
+    <header>
+        <nav class="navbar__container" id="navbar__container">
+            <div class="navbar__left">
+                <div class="navbar__logo">
+                    <a href="/"><img id="nav__logo"
+                            src="../common_component_image/virtual-dom-logo.svg" alt="LOGO"></a>
+                </div>
+                <div class="navbar__links" id="navbar__links">
+                    <ul class="navbar__links__inner" id="navbar__links__inner">
+                        <li><a id="home__link" href="/">Home</a></li>
+
+                        <li class="topics" id="topics"><span id="topics__link">Topics</span>
+                            <ul class="navbar__links__inner__dropdown" id="navbar__links__inner__dropdown">
+                                <li><a class="active" href="../javscript.html">Javascript</a></li>
+                                <li id="react"><a href="../react.html">React</a></li>
+                                <li id="css"><a href="../css.html">Css</a></li>
+                                <li id="blogs"><a href="../blogs.html">Blogs</a></li>
+                                <li id="python"><a href="../python.html">Python</a></li>
+                                <li id="cpp"><a href="../cpp.html">C++</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a id="about-us__link" href="../about_us.html">About us</a></li>
+
+                        <li><a id="contact__link" href="../contact_us.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navbar__right">
+
+                <!-- Dark mode Theme -->
+                <div class="theme__container__js">
+                    <input type="checkbox" id="theme__changer__js">
+                    <label for="theme__changer__js" class="theme__changer__label__js">
+                        <div class="theme__changer__track__js"></div>
+                    </label>
+                </div>
+
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+            <div class="hamburger__menu" id="hamburger__menu">
+                <div class="hamburger__menu__button" id="hamburger__menu__button"></div>
+            </div>
+        </nav>
+        <!-- overlay -->
+        <div class="nav__menu__overlay" id="nav__menu__overlay"></div>
+    </header>
+
+
+    <!-- Javascript Series Section -->
+    <main class="javascript__series__section">
+        <h2 class="javascript__series__title">
+            Object in Javascript
+        </h2>
+        <article class="javascript__series__main">
+
+<p><span class="bold">#</span> In JS Object represents one of its data types. It is used to store various
+    keyed collections and more complex entities. Objects can be created using the Object() constructor or
+    the object literal syntax.
+</p>
+<p><span class="bold">#</span> According to W3schools, In JavaScript objects are king. If you understand
+    objects, you understand JavaScript. This is literally true In JavaScript, almost "everything" is an
+    object,except <a href="Types_of_Data_in_JS.html">Primitives Data Types</a>.</p>
+
+<p><span class="bold">#</span> Objects are reference data types.</p>
+<p><span class="bold">#</span> Arrays are good but not sufficient for real world data.</p>
+
+<p><span class="bold">#</span> Objects don't have index, They work in Key Value pairs like dictionary in
+    Python,if you gone through it. </p>
+
+<h6 class="subtitle">How to create objects</h6>
+
+<p><span class="bold">#</span> We can simply create objects using object literals (curly braces {} )</p>
+
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id58').innerText)"></span>
+    </div>
+<pre class="javascript__code">
+<code class="language-javascript" id="id58">
+const person = {
+    name: "avinash",
+    age: 20
+}
+</code>
+</pre>
+</div>
+
+<h6 class="subtitle">How to access data from objects</h6>
+
+<p>1. by dot(.) notation method <br>
+2. by bracket [ ] methods</p>
+
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id59').innerText)"></span>
+    </div>
+<pre class="javascript__code">
+<code class="language-javascript" id="id59">
+// By dot(.) method 
+
+console.log(person.name); // avinash 
+console.log(person.age); // 20
+
+// by bracket [] method 
+
+console.log(person["name"]); // avinash 
+console.log(person["age"]); // 20
+</code>
+</pre>
+</div>
+
+<h6 class="subtitle">How to add new key value pairs (properties) to objects</h6>
+
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id60').innerText)"></span>
+    </div>
+<pre class="javascript__code">
+<code class="language-javascript" id="id60">
+// By dot(.) 
+
+person.gender = "male";
+console.log(person);
+// {name: 'avinash', age: 20, gender: 'male'}
+
+// by bracket [] 
+
+person["hobbies"] = "music";
+console.log(person);
+// {name: 'avinash', age: 20, gender: 'male', hobbies: 'music'}
+</code>
+</pre>
+</div>
+
+<h6 class="subtitle">Difference b/w dot and bracket notation</h6>            
+
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id61').innerText)"></span>
+    </div>
+<pre class="javascript__code">
+<code class="language-javascript" id="id61">
+const person = {
+    name: "avinash",
+    age: 20,
+    hobbies: ["coding", "music", "sports"],
+    "person salary": 10000
+};
+
+// Use dot(.) notation for single word 
+console.log(person.hobbies);
+// ['coding', 'music', 'sports']
+
+// For keys more than single word we use bracket [] 
+console.log(person["person salary"]);
+// 10000
+</code>
+</pre>
+</div>
+
+<h6 class="subtitle">Add "email" key to the person object</h6> 
+
+<p>If we do person.key = "avinash225@gamil.com";</p>
+
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id62').innerText)"></span>
+    </div>
+<pre class="javascript__code">
+<code class="language-javascript" id="id62">
+const person = {
+    name: "avinash",
+    age: 20,
+    hobbies: ["coding", "music", "sports"]
+}
+
+const key = "email";
+person.key = "avinash225@gamil.com";
+console.log(person);
+
+// name: "avinash" 
+// age: 20 
+// hobbies: (3) ['coding', 'music', 'sports'] 
+// key: "avinash225@gamil.com"
+</code>
+</pre>
+</div>
+
+<p class="note"> <strong>NOTE -</strong> But we dont want like this instead we want email as keys.</p>
+
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id63').innerText)"></span>
+    </div>
+<pre class="javascript__code">
+<code class="language-javascript" id="id63">
+const key = "email";
+person[key] = "avinash225@gamil.com";
+console.log(person);
+
+// name: "avinash" 
+// age: 20 
+// hobbies: (3) ['coding', 'music', 'sports'] 
+// email: "avinash225@gamil.com"
+</code>
+</pre>
+</div>
+
+
+        </article>
+    </main>
+
+
+    <!-- Button class -->
+    <section class="button__class__main">
+        <button class="button__class prev">
+            <a href="Function_return.html">Prev</a>
+        </button>
+        <button class="button__class next">
+            <a href="Iterate_on_Object_in_JS.html">Next</a>
+        </button>
+    </section>
+
+    <!-- Footer section -->
+    <footer class="footer__container">
+
+        <div class="footer__container__upper">
+            <div class="footer__logo">
+                <a href="/"><img id="footer__logo"
+                        src="../common_component_image/virtual-dom-logo.svg" alt="LOGO"></a>
+            </div>
+            <div class="footer__main__links">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="../about_us.html">About Us</a></li>
+                    <li><a href="../contact_us.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer__main__topics__links">
+                <ul>
+                    <li class="footer__main__topics__links__title">Topics</li>
+                    <li><a href="../javscript.html">Javascript</a></li>
+                    <li><a href="../react.html">React</a></li>
+                    <li><a href="../css.html">Css</a></li>
+                    <li><a href="../blogs.html">Blogs</a></li>
+                    <li><a href="../python.html">Python</a></li>
+                    <li><a href="../cpp.html">C++</a></li>
+                </ul>
+            </div>
+            <div class="footer__social__links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+
+        <div class="footer__container__lower">
+            <div class="footer__copyright">
+                © 2021-2022 Virtual Dom All rights reserved. Built with <i class="fas fa-heart"></i>
+            </div>
+            <div class="footer__credit">
+                Developed by Avinash
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- Icon to reach top -->
+    <a href="#" class="to__top"><i class="fas fa-chevron-up"></i></a>
+
+    <script src="../main.js"></script>
+    <script src="../js/javascript.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+
+</body>
+
+</html>

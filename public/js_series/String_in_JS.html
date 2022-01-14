@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#daedfb">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="shortcut icon" href="../favicon/favicon-virtual-dom.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/javascript.css">
+    <title> String in Javascript </title>
+</head>
+
+<body class="preload">
+
+    <div id="preloader" class="preloader">
+        <div class="empty"></div>
+    </div>
+
+
+    <!-- Navigation Section-->
+    <header>
+        <nav class="navbar__container" id="navbar__container">
+            <div class="navbar__left">
+                <div class="navbar__logo">
+                    <a href="/"><img id="nav__logo" src="../common_component_image/virtual-dom-logo.svg"
+                            alt="LOGO"></a>
+                </div>
+                <div class="navbar__links" id="navbar__links">
+                    <ul class="navbar__links__inner" id="navbar__links__inner">
+                        <li><a id="home__link" href="/">Home</a></li>
+
+                        <li class="topics" id="topics"><span id="topics__link">Topics</span>
+                            <ul class="navbar__links__inner__dropdown" id="navbar__links__inner__dropdown">
+                                <li><a class="active" href="../javscript.html">Javascript</a></li>
+                                <li id="react"><a href="../react.html">React</a></li>
+                                <li id="css"><a href="../css.html">Css</a></li>
+                                <li id="blogs"><a href="../blogs.html">Blogs</a></li>
+                                <li id="python"><a href="../python.html">Python</a></li>
+                                <li id="cpp"><a href="../cpp.html">C++</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a id="about-us__link" href="../about_us.html">About us</a></li>
+
+                        <li><a id="contact__link" href="../contact_us.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navbar__right">
+
+                <!-- Dark mode Theme -->
+                <div class="theme__container__js">
+                    <input type="checkbox" id="theme__changer__js">
+                    <label for="theme__changer__js" class="theme__changer__label__js">
+                        <div class="theme__changer__track__js"></div>
+                    </label>
+                </div>
+
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+            <div class="hamburger__menu" id="hamburger__menu">
+                <div class="hamburger__menu__button" id="hamburger__menu__button"></div>
+            </div>
+        </nav>
+        <!-- overlay -->
+        <div class="nav__menu__overlay" id="nav__menu__overlay"></div>
+    </header>
+
+
+    <!-- Javascript Series Section -->
+    <main class="javascript__series__section">
+        <h2 class="javascript__series__title">
+            String in Javascript
+        </h2>
+        <article class="javascript__series__main">
+<p> <span class="bold">#</span> Strings are useful for holding data that can be represented in text form.
+Inshort Whenever we want to use text format we use string<span class="bg_highlighter">(builtin primitive
+data types in js)</span>. </p>
+
+<p><span class="bold">#</span> We use <span class="text_uline">single('')</span> or <span
+class="text_uline">double quotes("")</span> to represent string.</p>
+
+<p><span class="bold">#</span> Well string is a primitive datatypes But strings can also be defined as
+objects with the new keyword. </p>
+
+<p><span class="bg_highlighter">let firstName = new String("avinash");</span></p>
+
+<p><span class="bold">#</span> But we dont often use <span class="bg_highlighter">new</span> keyword to
+create strings as objects. It slows down execution speed.The new keyword complicates the code. This can
+produce some unexpected results, you can visit the <a
+href="https://www.w3schools.com/js/js_strings.asp">W3schools</a> website for deeper dive.</p>
+
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id83').innerText)"></span>
+    </div>
+<pre class="javascript__code">
+<code class="language-javascript" id="id83">
+let x = "avinash";
+let y = new String("avinash");
+
+console.log(x == y);  // true
+console.log(x === y); // false
+</code>
+</pre>
+</div>
+
+<p class="note"><strong>NOTE - </strong><span class="text_uline">==</span> means value are equal, <span
+class="text_uline">===</span> means value including the datatypes should also be same. As we
+understood in last para that one is <span class="text_uline">primitive datatypes (string)</span> and
+other is <span class="text_uline">objects</span>. you can check it by <span
+class="text_uline">typeof</span> method.</p>
+
+<p><span class="bold">#</span> String indexing start start from 0, we use <span class="bg_highlighter">length</span>  properties to know about
+the actual length of string. </p>
+
+<p><span class="bold">#</span> To know about the <span class="bg_highlighter">last index</span> we use <span class="bg_highlighter">String.length - 1</span>. </p>
+
+
+
+<h6 class="subtitle">String method & properties</h6>
+
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id84').innerText)"></span>
+    </div>
+<pre class="javascript__code">
+<code class="language-javascript" id="id84">
+const firstName = 'Avinash';
+const lastName = 'Kumar';
+const age = 20;
+
+let demo;
+
+// we will use this demo below for many times
+</code>
+</pre>
+</div>
+
+<p><span class="bg_highlighter">concatenation</span></p>
+
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id85').innerText)"></span>
+    </div>
+<pre class="javascript__code">
+<code class="language-javascript" id="id85">
+// concatenation 
+
+demo = firstName + lastName;
+console.log(demo); // AvinashKumar
+
+demo = firstName + ' ' + lastName;
+console.log(demo); // Avinash Kumar
+</code>
+</pre>
+</div>
+
+<p><span class="bg_highlighter">append</span></p>
+
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id86').innerText)"></span>
+    </div>
+<pre class="javascript__code">
+<code class="language-javascript" id="id86">
+// append(adding) 
+
+demo = 'Avinash';
+demo += 'Kumar'; // demo = demo + 'Kumar';
+
+console.log(demo); // Avinash Kumar
+</code>
+</pre>
+</div>
+
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id87').innerText)"></span>
+    </div>
+<pre class="javascript__code">
+<code class="language-javascript" id="id87">
+// old method 
+
+demo = 'Hello my name is ' + firstName + ' and I am' + age;
+
+console.log(demo); // Hello my name is Avinash and I am 20
+</code>
+</pre>
+</div>
+
+<p><span class="bg_highlighter">escaping</span></p>
+
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id88').innerText)"></span>
+    </div>
+<pre class="javascript__code">
+<code class="language-javascript" id="id88">
+// escaping 
+
+demo = 'That\'s awesome , i can\'t wait';
+
+console.log(demo); // That's awesome , i can't wait
+</code>
+</pre>
+</div>
+
+<p><span class="bg_highlighter">.length</span></p>
+
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id89').innerText)"></span>
+    </div>
+<pre class="javascript__code">
+<code class="language-javascript" id="id89">
+// length 
+
+demo = firstName.length;
+
+console.log(demo); // 7
+</code>
+</pre>
+</div>
+
+<p><span class="bg_highlighter">.concat</span></p>
+
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id90').innerText)"></span>
+    </div>
+<pre class="javascript__code">
+<code class="language-javascript" id="id90">
+// concat 
+
+demo = firstName.concat('', lastName);
+
+console.log(demo); // Avinash Kumar
+</code>
+</pre>
+</div>
+
+<p><span class="bg_highlighter">.toUppercase</span></p>
+
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id91').innerText)"></span>
+    </div>
+<pre class="javascript__code">
+<code class="language-javascript" id="id91">
+// touppercase 
+
+demo = firstName.toUpperCase();
+
+console.log(demo); // AVINASH
+</code>
+</pre>
+</div>
+
+<p><span class="bg_highlighter">.toLowercase</span></p>
+
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id92').innerText)"></span>
+    </div>
+<pre class="javascript__code">
+<code class="language-javascript" id="id92">
+// tolowercase 
+
+demo = firstName.toLowerCase();
+
+console.log(demo); // avinash
+</code>
+</pre>
+</div>
+
+<p><span class="bg_highlighter">.startswith</span></p>
+
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id93').innerText)"></span>
+    </div>
+<pre class="javascript__code">
+<code class="language-javascript" id="id93">
+// startsWith
+
+demo = firstName.startsWith('A');
+
+console.log(demo); // true
+</code>
+</pre>
+</div>
+
+<p><span class="bg_highlighter">.endswith</span></p>
+
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id94').innerText)"></span>
+    </div>
+<pre class="javascript__code">
+<code class="language-javascript" id="id94">
+// endsWith
+
+demo = firstName.endsWith('A');
+
+console.log(demo); // false
+</code>
+</pre>
+</div>
+
+<p><span class="bg_highlighter">.indexof()</span></p>
+
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id95').innerText)"></span>
+    </div>
+<pre class="javascript__code">
+<code class="language-javascript" id="id95">
+// indexof()
+
+demo = firstName.indexOf('n');
+
+console.log(demo); // 3
+</code>
+</pre>
+</div>
+
+<p><span class="bg_highlighter">.lastIndexof()</span></p>
+
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id96').innerText)"></span>
+    </div>
+<pre class="javascript__code">
+<code class="language-javascript" id="id96">
+// lastindexof()
+
+let quote = 'hello from the hello world program';
+let quoteLetter1 = quote.indexOf('o');
+let quoteLetter2 = quote.lastIndexOf('o');
+let quote1 = quote.indexOf('hello');
+let quote2 = quote.lastIndexOf('hello');
+let quote3 = quote.lastIndexOf('code');
+
+
+console.log(quoteLetter1, quoteLetter2); // 4 29
+console.log(quote1, quote2, quote3); // 15 0 -1
+</code>
+</pre>
+</div>
+
+<p><span class="bg_highlighter">.charat()</span></p>
+
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id97').innerText)"></span>
+    </div>
+<pre class="javascript__code">
+<code class="language-javascript" id="id97">
+// charat
+demo = firstName.charAt(1);
+
+console.log(demo); // v
+</code>
+</pre>
+</div>
+
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id98').innerText)"></span>
+    </div>
+<pre class="javascript__code">
+<code class="language-javascript" id="id98">
+// getLastChar
+
+demo = firstName.charAt(firstName.length - 1);
+
+console.log(demo); // h
+</code>
+</pre>
+</div>
+
+<p><span class="bg_highlighter">.substring()</span></p>
+
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id99').innerText)"></span>
+    </div>
+<pre class="javascript__code">
+<code class="language-javascript" id="id99">
+// substring
+
+demo = firstName.substring(0, 4);
+
+console.log(demo); // Avin
+</code>
+</pre>
+</div>
+
+<p><span class="bg_highlighter">.slice()</span></p>
+
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id100').innerText)"></span>
+    </div>
+<pre class="javascript__code">
+<code class="language-javascript" id="id100">
+// slice()
+
+demo = firstName.slice(0, 4);
+console.log(demo); // Avin
+
+demo = firstName.slice(-2);
+console.log(demo); // sh
+</code>
+</pre>
+</div>
+
+<p><span class="bg_highlighter">.split()</span></p>
+
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id101').innerText)"></span>
+    </div>
+<pre class="javascript__code">
+<code class="language-javascript" id="id101">
+// split() 
+
+const str = 'Hello My name is Avinash';
+const tags = 'web development, web design, programming';
+
+demo = str.split(' ');
+console.log(demo); // ['Hello', 'My', 'name', 'is', 'Avinash']
+
+demo = tags.split(',');
+console.log(demo); // ['web development', ' web design', ' programming']
+</code>
+</pre>
+</div>
+
+<p><span class="bg_highlighter">.replace()</span></p>
+
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id102').innerText)"></span>
+    </div>
+<pre class="javascript__code">
+<code class="language-javascript" id="id102">
+// replace()
+
+const myString = 'oh shit! Here we go again';
+demo = myString.replace('shit', 'wow');
+
+console.log(demo);  // oh wow! Here we go again    
+</code>
+</pre>
+</div>
+
+<p><span class="bg_highlighter">.includes()</span></p>
+
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id103').innerText)"></span>
+    </div>
+<pre class="javascript__code">
+<code class="language-javascript" id="id103">
+// includes
+
+demo = firstName.includes('a');
+
+console.log(demo);  // true
+</code>
+</pre>
+</div>
+
+<p><span class="bg_highlighter">.trim()</span></p>
+
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id104').innerText)"></span>
+    </div>
+<pre class="javascript__code">
+<code class="language-javascript" id="id104">
+// trim() 
+
+const whiteSpaceString = '   oh shit! Here we go again  '; 
+console.log(whiteSpaceString.length); // 30
+
+demo = whiteSpaceString.trim();
+console.log(demo.length); // 25 
+console.log(demo);        // oh shit! Here we go again
+</code>
+</pre>
+</div>
+
+<p><span class="bg_highlighter">.match()</span></p>
+
+<div class="js__code__section">
+    <div class="js__upper">
+        <span class="js__title">Javascript</span>
+        <span title="Copy Code" class="copy__button" onclick="copyToClipboard(document.getElementById('id105').innerText)"></span>
+    </div>
+<pre class="javascript__code">
+<code class="language-javascript" id="id105">
+// match() 
+
+const broCode = 'Do you got it right, yeah i got you';
+
+demo = broCode.match('got');
+console.log(demo);  // ['got', index: 7]
+
+// To want more than one match we use globally g prefix 
+
+demo = broCode.match(/got/g); 
+console.log(demo);  // ['got', 'got']
+</code>
+</pre>
+</div>
+
+
+        </article>
+    </main>
+
+
+    <!-- Button class -->
+    <section class="button__class__main">
+        <button class="button__class prev">
+            <a href="Iterate_on_Object_in_JS.html">Prev</a>
+        </button>
+        <button class="button__class next">
+            <a href="">Next</a>
+        </button>
+    </section>
+
+    <!-- Footer section -->
+    <footer class="footer__container">
+
+        <div class="footer__container__upper">
+            <div class="footer__logo">
+                <a href="/"><img id="footer__logo" src="../common_component_image/virtual-dom-logo.svg"
+                        alt="LOGO"></a>
+            </div>
+            <div class="footer__main__links">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="../about_us.html">About Us</a></li>
+                    <li><a href="../contact_us.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer__main__topics__links">
+                <ul>
+                    <li class="footer__main__topics__links__title">Topics</li>
+                    <li><a href="../javscript.html">Javascript</a></li>
+                    <li><a href="../react.html">React</a></li>
+                    <li><a href="../css.html">Css</a></li>
+                    <li><a href="../blogs.html">Blogs</a></li>
+                    <li><a href="../python.html">Python</a></li>
+                    <li><a href="../cpp.html">C++</a></li>
+                </ul>
+            </div>
+            <div class="footer__social__links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+
+        <div class="footer__container__lower">
+            <div class="footer__copyright">
+                © 2021-2022 Virtual Dom All rights reserved. Built with <i class="fas fa-heart"></i>
+            </div>
+            <div class="footer__credit">
+                Developed by Avinash
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- Icon to reach top -->
+    <a href="#" class="to__top"><i class="fas fa-chevron-up"></i></a>
+
+    <script src="../main.js"></script>
+    <script src="../js/javascript.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+</body>
+
+</html>
